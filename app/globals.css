@@ -23,3 +23,29 @@ mark, strong {
   color: var(--link);
   padding: 0 0.25em;
 }
+
+header span, 
+main p {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--foreground);
+}
+
+main h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--foreground);
+}
+
+footer nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+footer nav ul li a {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--link);
+  text-decoration: none;
+}

@@ -16,7 +16,6 @@ export default function Home() {
             <li><a href="https://www.linkedin.com/in/braulio-romero/">SOCIAL</a></li>
           </ul>
         </nav>
-        <p>Footer</p>
       </footer>
     </div>
   );

@@ -190,6 +190,79 @@ The effectiveness of this portfolio will be measured by:
 
 ---
 
+## 🛠️ Technical Implementation
+
+### Stack
+
+- **Next.js 16** (App Router) — single-page site using the `app/` directory
+- **React** with `"use client"` for interactive state
+- **Tailwind CSS v4** via PostCSS — no config file, theme tokens defined in `globals.css`
+- **TypeScript** throughout
+
+---
+
+### Architecture
+
+The site is fully componentized. Each section of the page lives in its own file under `app/components/`:
+
+```
+app/
+  page.tsx              ← state + composition only (43 lines)
+  theme.ts              ← all dark/light style tokens
+  locales/
+    en.json             ← English copy
+    es.json             ← Spanish copy
+  components/
+    Controls.tsx        ← theme + language toggle buttons
+    Hero.tsx            ← hero section + info card
+    About.tsx           ← about text + skills chips
+    Work.tsx            ← projects grid
+    Experience.tsx      ← experience cards
+    Contact.tsx         ← contact section + links
+```
+
+`page.tsx` owns all state and passes `theme` and locale data down as props — no global state library needed.
+
+---
+
+### Theming
+
+Dark and light modes are implemented via a typed style token object in `theme.ts`. Each token maps a semantic slot (e.g. `accent`, `cardInner`, `muted`) to a Tailwind class string for each mode.
+
+```ts
+// theme.ts
+const dark = { accent: "text-[#69E8FF]", cardInner: "bg-[#141821] ...", ... }
+const light = { accent: "text-cyan-700",  cardInner: "bg-gray-50 ...",  ... }
+
+export const themes = { dark, light }
+export type Theme = typeof dark
+```
+
+Switching is instant — no CSS variables, no `document.classList`, just a `useState` boolean that selects which token set to use. A `transition-colors duration-300` on `<main>` animates the change.
+
+---
+
+### Internationalization
+
+All user-facing copy lives in `app/locales/en.json` and `app/locales/es.json`. The page imports both at build time and selects between them via a `lang` state variable. No i18n library required.
+
+The locale JSON files are fully typed via TypeScript's `typeof` inference — adding a key to one file surfaces a type error if the other is not updated.
+
+---
+
+### Design Tokens
+
+Brand values used consistently across both themes:
+
+| Token | Value |
+|---|---|
+| Accent (cyan) | `#69E8FF` |
+| Dark background | `#0f1115` |
+| Dark card surface | `#141821` |
+| Light background | `gray-50` |
+
+---
+
 ## 🧠 Key Takeaway
 
 This is not just a portfolio.

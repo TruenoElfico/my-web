@@ -174,6 +174,14 @@ export default function PersonalPortfolioPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-16">
+        <div className="mb-8">
+          <p className="text-sm uppercase tracking-[0.24em] text-[#69E8FF]">
+            {t.experience.label}
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+            {t.experience.heading}
+          </h2>
+        </div>
         <div className="grid gap-6 lg:grid-cols-3">
           {t.experience.items.map((item) => (
             <div

@@ -26,7 +26,7 @@ const skills = [
 
 export default function PersonalPortfolioPage() {
   const [lang, setLang] = useState<"en" | "es">("en");
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const t = locales[lang];
   const theme = isDark ? themes.dark : themes.light;
 

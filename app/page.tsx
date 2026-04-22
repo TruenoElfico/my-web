@@ -3,6 +3,7 @@
 import { useState } from "react";
 import en from "./locales/en.json";
 import es from "./locales/es.json";
+import { themes } from "./theme";
 
 const locales = { en, es };
 
@@ -19,41 +20,58 @@ const skills = [
 
 export default function PersonalPortfolioPage() {
   const [lang, setLang] = useState<"en" | "es">("en");
+  const [isLight, setIsDark] = useState(true);
   const t = locales[lang];
 
+  const s = isLight ? themes.light : themes.dark;
+
   return (
-    <main className="min-h-screen bg-[#0f1115] text-white">
-      {/* Language toggle */}
-      <div className="fixed right-6 top-6 z-50">
+    <main className={`min-h-screen transition-colors duration-300 ${s.main}`}>
+      {/* Controls */}
+      <div className="fixed right-6 top-6 z-50 flex gap-2">
+        <button
+          onClick={() => setIsDark(!isLight)}
+          className={`cursor-pointer rounded-full border px-4 py-2 text-sm font-medium shadow-lg backdrop-blur transition ${s.toggleBtn}`}
+        >
+          {isLight ? "Dark" : "Light"}
+        </button>
         <button
           onClick={() => setLang(lang === "en" ? "es" : "en")}
-          className="cursor-pointer rounded-full border border-white/15 bg-[#141821] px-4 py-2 text-sm font-medium text-white/80 shadow-lg backdrop-blur transition hover:border-[#69E8FF]/40 hover:text-[#69E8FF]"
+          className={`cursor-pointer rounded-full border px-4 py-2 text-sm font-medium shadow-lg backdrop-blur transition ${s.toggleBtn}`}
         >
           {lang === "en" ? "ES" : "EN"}
         </button>
       </div>
 
-      <section className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(105,232,255,0.16),transparent_28%),radial-gradient(circle_at_left,rgba(255,255,255,0.05),transparent_20%)]" />
-        <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.07)_1px,transparent_1px)] [background-size:34px_34px]" />
+      <section className={`relative overflow-hidden ${s.heroBorder}`}>
+        <div className={`absolute inset-0 ${s.heroGradient}`} />
+        <div
+          className={`absolute inset-0 opacity-20 ${s.heroGrid} [background-size:34px_34px]`}
+        />
 
         <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-[1.2fr_0.8fr] md:px-10 lg:px-16 lg:py-28">
           <div className="flex flex-col justify-center">
-            <div className="mb-6 inline-flex w-fit items-center rounded-full border border-[#69E8FF]/30 bg-[#69E8FF]/10 px-4 py-1 text-sm text-[#69E8FF] shadow-lg shadow-cyan-500/10">
+            <div
+              className={`mb-6 inline-flex w-fit items-center rounded-full px-4 py-1 text-sm shadow-lg ${s.badge}`}
+            >
               {t.badge}
             </div>
 
             <h1 className="max-w-4xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
               {t.hero.name}
-              <span className="mt-2 block text-[#69E8FF]">
+              <span className={`mt-2 block ${s.heroSpan}`}>
                 {t.hero.tagline}
               </span>
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base font-medium leading-7 text-white/90 md:text-lg">
+            <p
+              className={`mt-6 max-w-2xl text-base font-medium leading-7 md:text-lg ${s.bodyText}`}
+            >
               {t.hero.description}
             </p>
-            <p className="mt-6 max-w-2xl text-base font-semibold leading-7 text-[#69E8FF] md:text-lg">
+            <p
+              className={`mt-6 max-w-2xl text-base font-semibold leading-7 md:text-lg ${s.availability}`}
+            >
               {t.hero.availability}
             </p>
 
@@ -66,7 +84,7 @@ export default function PersonalPortfolioPage() {
               </a>
               <a
                 href="#contact"
-                className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/10"
+                className={`rounded-2xl px-6 py-3 text-sm font-medium transition ${s.secondaryBtn}`}
               >
                 {t.hero.cta_contact}
               </a>
@@ -74,35 +92,37 @@ export default function PersonalPortfolioPage() {
           </div>
 
           <div className="flex items-center justify-center">
-            <div className="w-full max-w-md rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl backdrop-blur">
-              <div className="rounded-[1.5rem] border border-white/10 bg-[#141821] p-6">
+            <div
+              className={`w-full max-w-md rounded-[2rem] p-4 shadow-2xl backdrop-blur ${s.cardOuter}`}
+            >
+              <div className={`rounded-[1.5rem] p-6 ${s.cardInner}`}>
                 <div className="mb-6 flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-white/50">{t.card.label}</p>
+                    <p className={`text-sm ${s.subtle}`}>{t.card.label}</p>
                     <p className="text-lg font-medium">{t.card.title}</p>
                   </div>
-                  <div className="h-3 w-3 rounded-full bg-[#69E8FF] shadow-[0_0_20px_rgba(105,232,255,0.8)]" />
+                  <div className={`h-3 w-3 rounded-full ${s.dot}`} />
                 </div>
 
                 <div className="space-y-4">
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-sm text-white/50">
+                  <div className={`rounded-2xl p-4 ${s.cardRow}`}>
+                    <p className={`text-sm ${s.subtle}`}>
                       {t.card.specialty_label}
                     </p>
                     <p className="mt-1 text-base font-medium">
                       {t.card.specialty_value}
                     </p>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-sm text-white/50">
+                  <div className={`rounded-2xl p-4 ${s.cardRow}`}>
+                    <p className={`text-sm ${s.subtle}`}>
                       {t.card.approach_label}
                     </p>
                     <p className="mt-1 text-base font-medium">
                       {t.card.approach_value}
                     </p>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-sm text-white/50">{t.card.goal_label}</p>
+                  <div className={`rounded-2xl p-4 ${s.cardRow}`}>
+                    <p className={`text-sm ${s.subtle}`}>{t.card.goal_label}</p>
                     <p className="mt-1 text-base font-medium">
                       {t.card.goal_value}
                     </p>
@@ -117,23 +137,23 @@ export default function PersonalPortfolioPage() {
       <section className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-16">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <p className="text-sm uppercase tracking-[0.24em] text-[#69E8FF]">
+            <p className={`text-sm uppercase tracking-[0.24em] ${s.accent}`}>
               {t.about.label}
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
               {t.about.heading}
             </h2>
-            <p className="mt-5 max-w-xl leading-7 text-white/70">
+            <p className={`mt-5 max-w-xl leading-7 ${s.muted}`}>
               {t.about.body}
             </p>
-            <p className="mt-4 text-sm text-white/50">{t.about.tags}</p>
+            <p className={`mt-4 text-sm ${s.subtle}`}>{t.about.tags}</p>
           </div>
 
           <div className="flex flex-wrap gap-3">
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="h-fit rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80"
+                className={`h-fit rounded-2xl px-4 py-2 text-sm ${s.skillChip}`}
               >
                 {skill}
               </span>
@@ -148,7 +168,7 @@ export default function PersonalPortfolioPage() {
       >
         <div className="mb-8 flex items-end justify-between gap-4">
           <div>
-            <p className="text-sm uppercase tracking-[0.24em] text-[#69E8FF]">
+            <p className={`text-sm uppercase tracking-[0.24em] ${s.accent}`}>
               {t.work.label}
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
@@ -161,11 +181,11 @@ export default function PersonalPortfolioPage() {
           {t.work.projects.map((project) => (
             <article
               key={project.title}
-              className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur transition hover:-translate-y-1 hover:bg-white/[0.07]"
+              className={`rounded-[1.75rem] p-6 shadow-xl backdrop-blur transition hover:-translate-y-1 ${s.workCard}`}
             >
-              <div className="mb-4 h-10 w-10 rounded-2xl border border-[#69E8FF]/30 bg-[#69E8FF]/10" />
+              <div className={`mb-4 h-10 w-10 rounded-2xl ${s.workIcon}`} />
               <h3 className="text-xl font-medium">{project.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-white/65">
+              <p className={`mt-3 text-sm leading-7 ${s.faint}`}>
                 {project.description}
               </p>
             </article>
@@ -175,7 +195,7 @@ export default function PersonalPortfolioPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-16">
         <div className="mb-8">
-          <p className="text-sm uppercase tracking-[0.24em] text-[#69E8FF]">
+          <p className={`text-sm uppercase tracking-[0.24em] ${s.accent}`}>
             {t.experience.label}
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight">
@@ -186,11 +206,11 @@ export default function PersonalPortfolioPage() {
           {t.experience.items.map((item) => (
             <div
               key={item.role}
-              className="rounded-[1.75rem] border border-white/10 bg-[#12161f] p-6"
+              className={`rounded-[1.75rem] p-6 ${s.expCard}`}
             >
-              <p className="text-sm text-[#69E8FF]">{item.company}</p>
+              <p className={`text-sm ${s.expCompany}`}>{item.company}</p>
               <h3 className="mt-2 text-xl font-medium">{item.role}</h3>
-              <p className="mt-3 text-sm leading-7 text-white/65">
+              <p className={`mt-3 text-sm leading-7 ${s.faint}`}>
                 {item.detail}
               </p>
             </div>
@@ -202,14 +222,14 @@ export default function PersonalPortfolioPage() {
         id="contact"
         className="mx-auto max-w-7xl px-6 pb-20 md:px-10 lg:px-16"
       >
-        <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.03] p-8 md:p-10">
-          <p className="text-sm uppercase tracking-[0.24em] text-[#69E8FF]">
+        <div className={`rounded-[2rem] p-8 md:p-10 ${s.contactCard}`}>
+          <p className={`text-sm uppercase tracking-[0.24em] ${s.accent}`}>
             {t.contact.label}
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight">
             {t.contact.heading}
           </h2>
-          <p className="mt-4 max-w-2xl leading-7 text-white/70">
+          <p className={`mt-4 max-w-2xl leading-7 ${s.muted}`}>
             {t.contact.body}
           </p>
 
@@ -223,14 +243,14 @@ export default function PersonalPortfolioPage() {
             <a
               href="https://www.linkedin.com/in/braulio-romero/"
               target="_blank"
-              className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white"
+              className={`rounded-2xl px-6 py-3 text-sm font-medium transition ${s.secondaryBtn}`}
             >
               {t.contact.linkedin_btn}
             </a>
             <a
               href="https://github.com/TruenoElfico"
               target="_blank"
-              className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white"
+              className={`rounded-2xl px-6 py-3 text-sm font-medium transition ${s.secondaryBtn}`}
             >
               {t.contact.github_btn}
             </a>

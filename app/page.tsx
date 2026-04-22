@@ -1,56 +1,38 @@
+"use client";
+
+import { useState } from "react";
+import en from "./locales/en.json";
+import es from "./locales/es.json";
+
+const locales = { en, es };
+
+const skills = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Design Systems",
+  "Accessibility",
+  "Performance",
+  "UX Engineering",
+  "Frontend Architecture",
+];
+
 export default function PersonalPortfolioPage() {
-  const skills = [
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Design Systems",
-    "Accessibility",
-    "Performance",
-    "UX Engineering",
-    "Frontend Architecture",
-  ];
-
-  const projects = [
-    {
-      title: "Landing pages that convert",
-      description:
-        "Fast, visually polished landing pages built for clarity, performance, and user engagement.",
-    },
-    {
-      title: "Web applications",
-      description:
-        "Responsive, production-ready apps with clean architecture and strong UX foundations.",
-    },
-    {
-      title: "UI systems (when needed)",
-      description:
-        "Reusable components and UI foundations that keep products consistent and scalable.",
-    },
-  ];
-
-  const experience = [
-    {
-      role: "Senior UX Engineer",
-      company: "Product & Platform Work",
-      detail:
-        "Design systems, frontend architecture, and product UI—bridging design and engineering.",
-    },
-    {
-      role: "Frontend Engineer",
-      company: "Web Products",
-      detail:
-        "BBuilding fast, responsive, and maintainable interfaces with modern tools.",
-    },
-    {
-      role: "Product Builder",
-      company: "Personal Projects",
-      detail:
-        "From idea to production—designing and building user-focused experiences.",
-    },
-  ];
+  const [lang, setLang] = useState<"en" | "es">("en");
+  const t = locales[lang];
 
   return (
     <main className="min-h-screen bg-[#0f1115] text-white">
+      {/* Language toggle */}
+      <div className="fixed right-6 top-6 z-50">
+        <button
+          onClick={() => setLang(lang === "en" ? "es" : "en")}
+          className="cursor-pointer rounded-full border border-white/15 bg-[#141821] px-4 py-2 text-sm font-medium text-white/80 shadow-lg backdrop-blur transition hover:border-[#69E8FF]/40 hover:text-[#69E8FF]"
+        >
+          {lang === "en" ? "ES" : "EN"}
+        </button>
+      </div>
+
       <section className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(105,232,255,0.16),transparent_28%),radial-gradient(circle_at_left,rgba(255,255,255,0.05),transparent_20%)]" />
         <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.07)_1px,transparent_1px)] [background-size:34px_34px]" />
@@ -58,24 +40,21 @@ export default function PersonalPortfolioPage() {
         <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-[1.2fr_0.8fr] md:px-10 lg:px-16 lg:py-28">
           <div className="flex flex-col justify-center">
             <div className="mb-6 inline-flex w-fit items-center rounded-full border border-[#69E8FF]/30 bg-[#69E8FF]/10 px-4 py-1 text-sm text-[#69E8FF] shadow-lg shadow-cyan-500/10">
-              UX Engineer • Design Systems • Frontend
+              {t.badge}
             </div>
 
             <h1 className="max-w-4xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-              Braulio Romero
+              {t.hero.name}
               <span className="mt-2 block text-[#69E8FF]">
-                Building complete web experiences that scale.
+                {t.hero.tagline}
               </span>
             </h1>
 
             <p className="mt-6 max-w-2xl text-base font-medium leading-7 text-white/90 md:text-lg">
-              I design and build complete web experiences—from high-converting
-              landing pages to scalable product interfaces. I focus on
-              delivering fast, clear, and production-ready solutions that help
-              products launch, grow, and perform.
+              {t.hero.description}
             </p>
             <p className="mt-6 max-w-2xl text-base font-semibold leading-7 text-[#69E8FF] md:text-lg">
-              → Available for frontend, product, and web experience work.
+              {t.hero.availability}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -83,13 +62,13 @@ export default function PersonalPortfolioPage() {
                 href="#work"
                 className="rounded-2xl bg-[#69E8FF] px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.02]"
               >
-                View my work
+                {t.hero.cta_work}
               </a>
               <a
                 href="#contact"
                 className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/10"
               >
-                Contact me
+                {t.hero.cta_contact}
               </a>
             </div>
           </div>
@@ -99,31 +78,33 @@ export default function PersonalPortfolioPage() {
               <div className="rounded-[1.5rem] border border-white/10 bg-[#141821] p-6">
                 <div className="mb-6 flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-white/50">Current focus</p>
-                    <p className="text-lg font-medium">
-                      Web experiences + frontend architecture
-                    </p>
+                    <p className="text-sm text-white/50">{t.card.label}</p>
+                    <p className="text-lg font-medium">{t.card.title}</p>
                   </div>
                   <div className="h-3 w-3 rounded-full bg-[#69E8FF] shadow-[0_0_20px_rgba(105,232,255,0.8)]" />
                 </div>
 
                 <div className="space-y-4">
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-sm text-white/50">Specialty</p>
+                    <p className="text-sm text-white/50">
+                      {t.card.specialty_label}
+                    </p>
                     <p className="mt-1 text-base font-medium">
-                      Building scalable interfaces and product-ready UI
+                      {t.card.specialty_value}
                     </p>
                   </div>
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-sm text-white/50">Approach</p>
+                    <p className="text-sm text-white/50">
+                      {t.card.approach_label}
+                    </p>
                     <p className="mt-1 text-base font-medium">
-                      Clean UX, strong foundations, accessible interfaces
+                      {t.card.approach_value}
                     </p>
                   </div>
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-sm text-white/50">Goal</p>
+                    <p className="text-sm text-white/50">{t.card.goal_label}</p>
                     <p className="mt-1 text-base font-medium">
-                      Ship fast, scalable, and high-quality web products
+                      {t.card.goal_value}
                     </p>
                   </div>
                 </div>
@@ -137,22 +118,15 @@ export default function PersonalPortfolioPage() {
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="text-sm uppercase tracking-[0.24em] text-[#69E8FF]">
-              About
+              {t.about.label}
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-              Designing and building for real products
+              {t.about.heading}
             </h2>
-            <p className="mt-5 max-w-xl text-white/70 leading-7">
-              I’m a UX Engineer with a strong focus on building real,
-              production-ready web interfaces. I work across design and frontend
-              development to create clear, usable, and high-performing
-              experiences—from landing pages to full product interfaces. My
-              approach is simple: build fast, keep it clean, and make sure it
-              scales when it needs to.
+            <p className="mt-5 max-w-xl leading-7 text-white/70">
+              {t.about.body}
             </p>
-            <p>
-              Landing pages • Web apps • Design systems • Frontend architecture
-            </p>
+            <p className="mt-4 text-sm text-white/50">{t.about.tags}</p>
           </div>
 
           <div className="flex flex-wrap gap-3">
@@ -175,16 +149,16 @@ export default function PersonalPortfolioPage() {
         <div className="mb-8 flex items-end justify-between gap-4">
           <div>
             <p className="text-sm uppercase tracking-[0.24em] text-[#69E8FF]">
-              What I build
+              {t.work.label}
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-              From idea to production-ready interface.
+              {t.work.heading}
             </h2>
           </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project) => (
+          {t.work.projects.map((project) => (
             <article
               key={project.title}
               className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur transition hover:-translate-y-1 hover:bg-white/[0.07]"
@@ -201,7 +175,7 @@ export default function PersonalPortfolioPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-16">
         <div className="grid gap-6 lg:grid-cols-3">
-          {experience.map((item) => (
+          {t.experience.items.map((item) => (
             <div
               key={item.role}
               className="rounded-[1.75rem] border border-white/10 bg-[#12161f] p-6"
@@ -222,16 +196,13 @@ export default function PersonalPortfolioPage() {
       >
         <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.03] p-8 md:p-10">
           <p className="text-sm uppercase tracking-[0.24em] text-[#69E8FF]">
-            Contact
+            {t.contact.label}
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-            Let’s build your next web experience.
+            {t.contact.heading}
           </h2>
-          <p className="mt-4 max-w-2xl text-white/70 leading-7">
-            Let’s build your next web experience. I design and build complete
-            web experiences—from landing pages to full product interfaces. If
-            you need a fast, polished, and production-ready frontend, let’s
-            talk.
+          <p className="mt-4 max-w-2xl leading-7 text-white/70">
+            {t.contact.body}
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -239,21 +210,21 @@ export default function PersonalPortfolioPage() {
               href="mailto:terrbete@gmail.com?subject=Project Inquiry&body=Hi Braulio, I'd like to talk about..."
               className="rounded-2xl bg-[#69E8FF] px-6 py-3 text-sm font-medium text-black"
             >
-              Let's talk
+              {t.contact.email_btn}
             </a>
             <a
               href="https://www.linkedin.com/in/braulio-romero/"
               target="_blank"
               className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white"
             >
-              LinkedIn
+              {t.contact.linkedin_btn}
             </a>
             <a
               href="https://github.com/TruenoElfico"
               target="_blank"
               className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white"
             >
-              GitHub
+              {t.contact.github_btn}
             </a>
           </div>
         </div>

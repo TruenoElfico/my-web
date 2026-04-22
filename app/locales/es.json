@@ -1,0 +1,74 @@
+{
+  "badge": "Ingeniero UX • Sistemas de Diseño • Frontend",
+  "hero": {
+    "name": "Braulio Romero",
+    "tagline": "Construyendo experiencias web completas que escalan.",
+    "description": "Diseño y construyo experiencias web completas—desde landing pages de alta conversión hasta interfaces de producto escalables. Me enfoco en entregar soluciones rápidas, claras y listas para producción que ayudan a los productos a lanzarse, crecer y rendir.",
+    "availability": "→ Disponible para trabajo de frontend, producto y experiencias web.",
+    "cta_work": "Ver mi trabajo",
+    "cta_contact": "Contáctame"
+  },
+  "card": {
+    "label": "Enfoque actual",
+    "title": "Experiencias web + arquitectura frontend",
+    "specialty_label": "Especialidad",
+    "specialty_value": "Construir interfaces escalables y UI lista para producción",
+    "approach_label": "Enfoque",
+    "approach_value": "UX limpio, bases sólidas, interfaces accesibles",
+    "goal_label": "Objetivo",
+    "goal_value": "Lanzar productos web rápidos, escalables y de alta calidad"
+  },
+  "about": {
+    "label": "Sobre mí",
+    "heading": "Diseñando y construyendo para productos reales",
+    "body": "Soy un Ingeniero UX con fuerte enfoque en construir interfaces web reales y listas para producción. Trabajo entre diseño y desarrollo frontend para crear experiencias claras, usables y de alto rendimiento—desde landing pages hasta interfaces de producto completas. Mi enfoque es simple: construir rápido, mantenerlo limpio y asegurarme de que escale cuando sea necesario.",
+    "tags": "Landing pages • Aplicaciones web • Sistemas de diseño • Arquitectura frontend"
+  },
+  "work": {
+    "label": "Lo que construyo",
+    "heading": "De la idea a la interfaz lista para producción.",
+    "projects": [
+      {
+        "title": "Landing pages que convierten",
+        "description": "Landing pages visualmente pulidas y rápidas, construidas para claridad, rendimiento y engagement del usuario."
+      },
+      {
+        "title": "Aplicaciones web",
+        "description": "Apps responsivas y listas para producción con arquitectura limpia y bases UX sólidas."
+      },
+      {
+        "title": "Sistemas de UI (cuando se necesitan)",
+        "description": "Componentes reutilizables y bases de UI que mantienen los productos consistentes y escalables."
+      }
+    ]
+  },
+  "experience": {
+    "label": "Experiencia",
+    "heading": "Donde he hecho el trabajo.",
+    "items": [
+      {
+        "role": "Ingeniero UX Senior",
+        "company": "Producto y Plataforma",
+        "detail": "Sistemas de diseño, arquitectura frontend y UI de producto—uniendo diseño e ingeniería."
+      },
+      {
+        "role": "Ingeniero Frontend",
+        "company": "Productos Web",
+        "detail": "Construyendo interfaces rápidas, responsivas y mantenibles con herramientas modernas."
+      },
+      {
+        "role": "Product Builder",
+        "company": "Proyectos Personales",
+        "detail": "De la idea a producción—diseñando y construyendo experiencias centradas en el usuario."
+      }
+    ]
+  },
+  "contact": {
+    "label": "Contacto",
+    "heading": "Construyamos tu próxima experiencia web.",
+    "body": "Construyamos tu próxima experiencia web. Diseño y construyo experiencias web completas—desde landing pages hasta interfaces de producto completas. Si necesitas un frontend rápido, pulido y listo para producción, hablemos.",
+    "email_btn": "Hablemos",
+    "linkedin_btn": "LinkedIn",
+    "github_btn": "GitHub"
+  }
+}

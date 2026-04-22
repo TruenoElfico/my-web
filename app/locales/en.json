@@ -1,0 +1,74 @@
+{
+  "badge": "UX Engineer • Design Systems • Frontend",
+  "hero": {
+    "name": "Braulio Romero",
+    "tagline": "Building complete web experiences that scale.",
+    "description": "I design and build complete web experiences—from high-converting landing pages to scalable product interfaces. I focus on delivering fast, clear, and production-ready solutions that help products launch, grow, and perform.",
+    "availability": "→ Available for frontend, product, and web experience work.",
+    "cta_work": "View my work",
+    "cta_contact": "Contact me"
+  },
+  "card": {
+    "label": "Current focus",
+    "title": "Web experiences + frontend architecture",
+    "specialty_label": "Specialty",
+    "specialty_value": "Building scalable interfaces and product-ready UI",
+    "approach_label": "Approach",
+    "approach_value": "Clean UX, strong foundations, accessible interfaces",
+    "goal_label": "Goal",
+    "goal_value": "Ship fast, scalable, and high-quality web products"
+  },
+  "about": {
+    "label": "About",
+    "heading": "Designing and building for real products",
+    "body": "I'm a UX Engineer with a strong focus on building real, production-ready web interfaces. I work across design and frontend development to create clear, usable, and high-performing experiences—from landing pages to full product interfaces. My approach is simple: build fast, keep it clean, and make sure it scales when it needs to.",
+    "tags": "Landing pages • Web apps • Design systems • Frontend architecture"
+  },
+  "work": {
+    "label": "What I build",
+    "heading": "From idea to production-ready interface.",
+    "projects": [
+      {
+        "title": "Landing pages that convert",
+        "description": "Fast, visually polished landing pages built for clarity, performance, and user engagement."
+      },
+      {
+        "title": "Web applications",
+        "description": "Responsive, production-ready apps with clean architecture and strong UX foundations."
+      },
+      {
+        "title": "UI systems (when needed)",
+        "description": "Reusable components and UI foundations that keep products consistent and scalable."
+      }
+    ]
+  },
+  "experience": {
+    "label": "Experience",
+    "heading": "Where I've done the work.",
+    "items": [
+      {
+        "role": "Senior UX Engineer",
+        "company": "Product & Platform Work",
+        "detail": "Design systems, frontend architecture, and product UI—bridging design and engineering."
+      },
+      {
+        "role": "Frontend Engineer",
+        "company": "Web Products",
+        "detail": "Building fast, responsive, and maintainable interfaces with modern tools."
+      },
+      {
+        "role": "Product Builder",
+        "company": "Personal Projects",
+        "detail": "From idea to production—designing and building user-focused experiences."
+      }
+    ]
+  },
+  "contact": {
+    "label": "Contact",
+    "heading": "Let's build your next web experience.",
+    "body": "Let's build your next web experience. I design and build complete web experiences—from landing pages to full product interfaces. If you need a fast, polished, and production-ready frontend, let's talk.",
+    "email_btn": "Let's talk",
+    "linkedin_btn": "LinkedIn",
+    "github_btn": "GitHub"
+  }
+}

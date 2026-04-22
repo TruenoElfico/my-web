@@ -1,36 +1,201 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Personal Portfolio — UX Design Brief
 
-## Getting Started
+## 🧩 Overview
 
-First, run the development server:
+This project is a personal portfolio website designed as a **high-conversion digital presence** to attract job opportunities and freelance clients.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Rather than functioning as a traditional portfolio, the site is structured as a **product-oriented landing page**, focused on clearly communicating value, showcasing capabilities, and encouraging contact.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 Problem Statement
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Most developer portfolios:
 
-## Learn More
+- focus too much on **skills and technologies**
+- lack **clear positioning**
+- do not guide users toward taking action
 
-To learn more about Next.js, take a look at the following resources:
+This results in:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- low engagement
+- unclear professional identity
+- missed opportunities (jobs or clients)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 💡 Solution
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Design a **focused, conversion-driven portfolio** that:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- clearly communicates **what I build**
+- positions me as a **UX Engineer who delivers complete web solutions**
+- reduces friction for **recruiters and potential clients**
+- emphasizes **real-world outcomes over technical jargon**
+
+---
+
+## 🧑‍💻 Target Audience
+
+### Primary
+
+- Recruiters hiring for:
+  - Frontend Engineer
+  - UX Engineer
+  - Product Engineer
+
+### Secondary
+
+- Startups and small teams needing:
+  - Landing pages
+  - Web applications
+  - UI/Frontend development
+
+---
+
+## 🧠 UX Strategy
+
+### 1. Positioning First
+
+The site prioritizes answering:
+
+> “Can this person build what I need?”
+
+Instead of:
+
+> “What tools does he know?”
+
+---
+
+### 2. Clear Information Hierarchy
+
+1. **Hero**
+   - Immediate value proposition
+   - Clear identity + specialization
+   - Primary call-to-action
+
+2. **About**
+   - Credibility and approach
+   - Concise, non-repetitive messaging
+
+3. **What I Build**
+   - Productized services:
+     - Landing pages
+     - Web applications
+     - UI systems
+
+   - Outcome-focused descriptions
+
+4. **Experience**
+   - Reinforces authority
+   - Short, scannable roles
+
+5. **Contact**
+   - Low-friction conversion
+   - Direct access (email / social)
+
+---
+
+### 3. Conversion-Focused Design
+
+- Minimal friction (no forms required initially)
+- Strong CTA: **“Let’s talk”**
+- Supporting microcopy:
+  - “Available for frontend, product, and web experience work”
+
+- Prioritization of **clarity over complexity**
+
+---
+
+## 🎨 Visual Design Principles
+
+### Tone
+
+- Professional, modern, and product-oriented
+- Subtle “premium tech” aesthetic
+
+### Color
+
+- Dark UI as default (focus + contrast)
+- Accent color for:
+  - CTAs
+  - Highlights
+  - Interaction feedback
+
+### Layout
+
+- Grid-based structure
+- Card components for modularity
+- Clear spacing for readability
+
+### Typography
+
+- Strong hierarchy (headline → body → labels)
+- Readable and scannable content
+
+---
+
+## ⚙️ UX Decisions
+
+- **Short content blocks** → faster scanning
+- **Reduced repetition** → clearer messaging
+- **Outcome-driven copy** → higher conversion
+- **Component-based layout** → scalable structure
+
+---
+
+## 🌍 Accessibility & Internationalization
+
+- Planned support for:
+  - 🇺🇸 English
+  - 🇲🇽 Spanish
+
+- Considerations:
+  - Clear language switching
+  - Consistent layout across languages
+  - Readability in both locales
+
+---
+
+## ☀️ Theming
+
+- Dark mode (default)
+- Light mode (planned)
+
+Goals:
+
+- Improve accessibility
+- Adapt to user preferences
+- Maintain visual consistency across themes
+
+---
+
+## 📈 Success Metrics
+
+The effectiveness of this portfolio will be measured by:
+
+- Increased recruiter outreach
+- Increased inbound messages (email / LinkedIn)
+- Freelance/project inquiries
+- Time-to-first-contact reduction
+
+---
+
+## 🚀 Future Improvements
+
+- Add **case studies with real metrics**
+- Integrate **analytics tracking**
+- Add **project deep-dives**
+- Optional: lightweight contact form or scheduling link
+
+---
+
+## 🧠 Key Takeaway
+
+This is not just a portfolio.
+
+It is a **personal product**, designed to:
+
+- communicate value clearly
+- reduce friction
+- convert visitors into opportunities

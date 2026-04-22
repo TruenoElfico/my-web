@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inria_Serif } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inriaSerif = Inria_Serif({
-  variable: "--font-inria-serif",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inriaSerif.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
         {children}
       </body>

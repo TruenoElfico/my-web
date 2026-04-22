@@ -14,17 +14,17 @@ export default function PersonalPortfolioPage() {
     {
       title: "Landing pages that convert",
       description:
-        "I design and build fast, visually polished landing pages focused on clarity, performance, and user engagement.",
+        "Fast, visually polished landing pages built for clarity, performance, and user engagement.",
     },
     {
-      title: "Scalable web applications",
+      title: "Web applications",
       description:
-        "From idea to interface, I build responsive, production-ready web apps with clean architecture and strong UX foundations.",
+        "Responsive, production-ready apps with clean architecture and strong UX foundations.",
     },
     {
-      title: "Reusable UI systems",
+      title: "UI systems (when needed)",
       description:
-        "When needed, I create component systems and UI foundations that keep products consistent and easy to scale.",
+        "Reusable components and UI foundations that keep products consistent and scalable.",
     },
   ];
 
@@ -33,19 +33,19 @@ export default function PersonalPortfolioPage() {
       role: "Senior UX Engineer",
       company: "Product & Platform Work",
       detail:
-        "Design systems, frontend architecture, and product UI—bridging design and engineering to ship scalable experiences.",
+        "Design systems, frontend architecture, and product UI—bridging design and engineering.",
     },
     {
       role: "Frontend Engineer",
       company: "Web Products",
       detail:
-        "Building fast, responsive, and maintainable interfaces using modern frameworks and best practices.",
+        "BBuilding fast, responsive, and maintainable interfaces with modern tools.",
     },
     {
       role: "Product Builder",
       company: "Personal Projects",
       detail:
-        "Designing and developing structured, user-focused experiences from concept to production.",
+        "From idea to production—designing and building user-focused experiences.",
     },
   ];
 
@@ -70,12 +70,9 @@ export default function PersonalPortfolioPage() {
 
             <p className="mt-6 max-w-2xl text-base font-medium leading-7 text-white/90 md:text-lg">
               I design and build complete web experiences—from high-converting
-              landing pages to scalable product interfaces. As a UX Engineer, I
-              bridge design and frontend development to deliver fast, clear, and
-              visually polished solutions that work in production. My work
-              combines product thinking, strong UI foundations, and frontend
-              architecture to build experiences that not only look good—but
-              scale.
+              landing pages to scalable product interfaces. I focus on
+              delivering fast, clear, and production-ready solutions that help
+              products launch, grow, and perform.
             </p>
             <p className="mt-6 max-w-2xl text-base font-semibold leading-7 text-[#69E8FF] md:text-lg">
               → Available for frontend, product, and web experience work.
@@ -146,13 +143,12 @@ export default function PersonalPortfolioPage() {
               Designing and building for real products
             </h2>
             <p className="mt-5 max-w-xl text-white/70 leading-7">
-              I help teams build scalable, high-quality user interfaces through
-              design systems and modern frontend architecture. As a UX Engineer,
-              I specialize in turning complex products into clean, consistent,
-              and accessible experiences—while improving developer efficiency
-              and long-term maintainability. If you're building or scaling a
-              product and need a strong UI foundation, I can help you design
-              systems that actually work in production.
+              I’m a UX Engineer with a strong focus on building real,
+              production-ready web interfaces. I work across design and frontend
+              development to create clear, usable, and high-performing
+              experiences—from landing pages to full product interfaces. My
+              approach is simple: build fast, keep it clean, and make sure it
+              scales when it needs to.
             </p>
             <p>
               Landing pages • Web apps • Design systems • Frontend architecture
@@ -179,7 +175,7 @@ export default function PersonalPortfolioPage() {
         <div className="mb-8 flex items-end justify-between gap-4">
           <div>
             <p className="text-sm uppercase tracking-[0.24em] text-[#69E8FF]">
-              How can i help
+              What I build
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
               From idea to production-ready interface.
@@ -232,11 +228,10 @@ export default function PersonalPortfolioPage() {
             Let’s build your next web experience.
           </h2>
           <p className="mt-4 max-w-2xl text-white/70 leading-7">
-            I’m available to design and build complete web experiences—from
-            landing pages to scalable product interfaces. Whether you need a
-            high-performing frontend, a polished UI, or help bringing a product
-            to life, I focus on delivering solutions that are fast, clear, and
-            ready for real use. Let’s talk about your project.
+            Let’s build your next web experience. I design and build complete
+            web experiences—from landing pages to full product interfaces. If
+            you need a fast, polished, and production-ready frontend, let’s
+            talk.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">

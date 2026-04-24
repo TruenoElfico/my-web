@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import en from "../locales/en.json";
 import es from "../locales/es.json";
 import { themes } from "../theme";
 import Controls from "../components/Controls";
+import { useAppTheme } from "../providers/ThemeProvider";
 
 const locales = { en, es };
 
@@ -15,8 +15,7 @@ const staticProjects = [
 ];
 
 export default function ProjectsPage() {
-  const [isDark, setIsDark] = useState(false);
-  const [lang, setLang] = useState<"en" | "es">("en");
+  const { isDark, toggleTheme, lang, toggleLang } = useAppTheme();
   const theme = isDark ? themes.dark : themes.light;
   const t = locales[lang].projects_page;
 
@@ -24,9 +23,9 @@ export default function ProjectsPage() {
     <main className={`min-h-screen transition-colors duration-300 ${theme.main}`}>
       <Controls
         isDark={isDark}
-        onToggleTheme={() => setIsDark(!isDark)}
+        onToggleTheme={toggleTheme}
         lang={lang}
-        onToggleLang={() => setLang(lang === "en" ? "es" : "en")}
+        onToggleLang={toggleLang}
         theme={theme}
       />
 

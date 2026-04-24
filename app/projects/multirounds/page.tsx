@@ -1,19 +1,18 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import en from "../../locales/en.json";
 import es from "../../locales/es.json";
 import { themes } from "../../theme";
 import Controls from "../../components/Controls";
+import { useAppTheme } from "../../providers/ThemeProvider";
 
 const locales = { en, es };
 
 const stack = ["React 19", "TypeScript", "Tailwind CSS v4", "Vite", "Jest"];
 
 export default function MultiroundsPage() {
-  const [isDark, setIsDark] = useState(false);
-  const [lang, setLang] = useState<"en" | "es">("en");
+  const { isDark, toggleTheme, lang, toggleLang } = useAppTheme();
   const theme = isDark ? themes.dark : themes.light;
   const t = locales[lang].multirounds_page;
 
@@ -23,9 +22,9 @@ export default function MultiroundsPage() {
     >
       <Controls
         isDark={isDark}
-        onToggleTheme={() => setIsDark(!isDark)}
+        onToggleTheme={toggleTheme}
         lang={lang}
-        onToggleLang={() => setLang(lang === "en" ? "es" : "en")}
+        onToggleLang={toggleLang}
         theme={theme}
       />
 

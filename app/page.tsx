@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import en from "./locales/en.json";
 import es from "./locales/es.json";
 import { themes } from "./theme";
 import Controls from "./components/Controls";
+import { useAppTheme } from "./providers/ThemeProvider";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Work from "./components/Work";
@@ -25,8 +25,7 @@ const skills = [
 ];
 
 export default function PersonalPortfolioPage() {
-  const [lang, setLang] = useState<"en" | "es">("en");
-  const [isDark, setIsDark] = useState(false);
+  const { isDark, toggleTheme, lang, toggleLang } = useAppTheme();
   const t = locales[lang];
   const theme = isDark ? themes.dark : themes.light;
 
@@ -34,9 +33,9 @@ export default function PersonalPortfolioPage() {
     <main className={`min-h-screen transition-colors duration-300 ${theme.main}`}>
       <Controls
         isDark={isDark}
-        onToggleTheme={() => setIsDark(!isDark)}
+        onToggleTheme={toggleTheme}
         lang={lang}
-        onToggleLang={() => setLang(lang === "en" ? "es" : "en")}
+        onToggleLang={toggleLang}
         theme={theme}
       />
       <Hero badge={t.badge} hero={t.hero} card={t.card} theme={theme} />

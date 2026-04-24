@@ -70,5 +70,123 @@
     "email_btn": "Hablemos",
     "linkedin_btn": "LinkedIn",
     "github_btn": "GitHub"
+  },
+  "projects_page": {
+    "back": "← Atrás",
+    "title": "Proyectos",
+    "tagline": "Cosas que he construido",
+    "description": "Una selección de productos y experimentos que he diseñado y desarrollado.",
+    "cta": "Ver caso de estudio",
+    "items": {
+      "multirounds": {
+        "name": "Multi Rounds",
+        "tagline": "Temporizador por fases para torneos de TCG",
+        "description": "Creado por una necesidad real en el juego. Multi Rounds te permite ejecutar hasta cuatro temporizadores independientes simultáneamente — cada uno con sus fases de Configuración, Principal y Tiempo Extra — para gestionar múltiples partidas sin perder el hilo.",
+        "status": "En vivo"
+      }
+    }
+  },
+  "multirounds_page": {
+    "back": "← Proyectos",
+    "badge": "TCG · Multi-Temporizador · Web App",
+    "title": "Multi Rounds",
+    "hero_span": "Temporizador por fases para torneos de TCG",
+    "hero_description": "Una aplicación web de múltiples temporizadores diseñada para torneos de juegos de cartas coleccionables y flujos de trabajo con tiempo estructurado. Ejecuta hasta cuatro temporizadores independientes simultáneamente, cada uno con su propia secuencia de fases, configuración y estado persistente.",
+    "phases": [
+      { "name": "Configuración", "desc": "Preparación antes de la ronda" },
+      { "name": "Principal", "desc": "Duración principal de la ronda" },
+      { "name": "Tiempo Extra", "desc": "Fase de prórroga" },
+      { "name": "En Reposo", "desc": "Temporizador en descanso" }
+    ],
+    "problem": {
+      "label": "El Problema",
+      "heading": "Los temporizadores genéricos fallan en torneos reales",
+      "items": [
+        "Sin concepto de fases — configuración, ronda, tiempo extra",
+        "Poca legibilidad durante partidas en vivo",
+        "Sin soporte para múltiples partidas simultáneas",
+        "Fricción al ajustar el tiempo durante el juego"
+      ]
+    },
+    "idea": {
+      "label": "La Idea",
+      "heading": "Un temporizador como una secuencia de fases estructuradas",
+      "description": "En lugar de una cuenta regresiva simple, Multi Rounds modela cada temporizador como un flujo que refleja cómo operan realmente los torneos."
+    },
+    "features": {
+      "label": "Características Clave",
+      "heading": "Todo lo necesario para el tiempo en vivo",
+      "items": [
+        { "title": "Sistema Multi-Temporizador", "desc": "Hasta 4 temporizadores completamente independientes en ejecución simultánea. El diseño dinámico divide la pantalla automáticamente a medida que se añaden temporizadores." },
+        { "title": "Flujo por Fases", "desc": "Cada temporizador sigue Configuración → Principal → Extra → En Reposo. Las fases transicionan automáticamente al completarse, reflejando el flujo real de los torneos." },
+        { "title": "Edición en Línea", "desc": "Haz clic para editar el nombre del temporizador o ajustar horas, minutos y segundos directamente — sin interrupciones modales durante el uso en vivo." },
+        { "title": "Estado Persistente", "desc": "La configuración sobrevive a las recargas de página mediante localStorage. Cada contador almacena sus propias duraciones y título bajo una clave única." },
+        { "title": "Diseño Responsivo", "desc": "La interfaz se adapta a medida que se añaden más temporizadores. Los tamaños de fuente escalan según el ancho del contenedor para mantener la legibilidad con 4 temporizadores en pantalla." },
+        { "title": "Modelo de Pantalla Única", "desc": "No se requiere navegación. Todos los controles son inmediatamente accesibles — diseñado para interacción rápida bajo presión." }
+      ]
+    },
+    "tech": {
+      "label": "Enfoque Técnico",
+      "heading": "Arquitectura",
+      "hook": {
+        "title": "Hook useTcgCounter",
+        "desc": "Cada temporizador está impulsado por un hook de React dedicado que encapsula la gestión de estado, la lógica de cuenta regresiva, las transiciones de fase y la persistencia.",
+        "persisted_comment": "// Estado persistido",
+        "runtime_comment": "// Estado en tiempo de ejecución"
+      },
+      "persistence": {
+        "title": "Persistencia",
+        "desc": "Cada temporizador almacena su configuración bajo una clave única con respaldos seguros para datos malformados.",
+        "key_label": "clave:",
+        "defaults_comment": "// Valores por defecto"
+      },
+      "phase_seq": {
+        "title": "Secuencia de Fases"
+      }
+    },
+    "decisions": {
+      "label": "Decisiones de Diseño",
+      "heading": "Por qué funciona así",
+      "items": [
+        { "title": "Modelo por Fases", "desc": "Elegido para reflejar el flujo real de los torneos en lugar de una cuenta regresiva genérica." },
+        { "title": "Instancias de Temporizador Independientes", "desc": "Cada temporizador está aislado para evitar complejidad de estado compartido y garantizar fiabilidad." },
+        { "title": "Edición en Línea", "desc": "Elimina la fricción y permite ajustes rápidos durante las partidas en vivo." },
+        { "title": "Persistencia Local", "desc": "Evita requisitos de inicio de sesión mientras preserva las configuraciones del usuario entre sesiones." }
+      ]
+    },
+    "challenges": {
+      "label": "Desafíos",
+      "items": [
+        "Gestionar múltiples temporizadores independientes sin conflictos de estado",
+        "Mantener la interfaz legible en diseños dinámicos",
+        "Diseñar un sistema de fases flexible pero simple",
+        "Asegurar transiciones suaves entre fases"
+      ]
+    },
+    "outcome": {
+      "label": "Resultado",
+      "items": [
+        "Mejora la claridad y la consistencia del tiempo durante los torneos",
+        "Reduce la carga manual para organizadores y jugadores",
+        "Soporta flujos de trabajo de múltiples partidas en el mundo real",
+        "Demuestra pensamiento de producto y diseño UX bajo restricciones"
+      ]
+    },
+    "future": {
+      "label": "¿Qué sigue?",
+      "heading": "Mejoras futuras",
+      "items": [
+        "Modo pantalla completa para pantallas de torneo",
+        "Alertas de sonido y visuales",
+        "Presets y configuraciones guardadas",
+        "Integración de analíticas",
+        "Monetización — donaciones / funciones premium"
+      ]
+    },
+    "reflection": {
+      "label": "Reflexión",
+      "body": "Este proyecto comenzó como una necesidad personal y evolucionó en un producto enfocado. Destaca la importancia de construir a partir de casos de uso reales, diseñar según el contexto y mantener las interfaces simples bajo presión.",
+      "cta": "Ver proyecto en vivo →"
+    }
   }
 }

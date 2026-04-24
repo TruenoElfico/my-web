@@ -9,10 +9,10 @@ import Controls from "../components/Controls";
 const projects = [
   {
     slug: "multirounds",
-    name: "Focus Rounds",
+    name: "Multi Rounds",
     tagline: "Phase-based timer for TCG tournaments",
     description:
-      "Built out of a real need at the table. Focus Rounds lets you run up to four independent timers simultaneously — each with its own Setup, Main, and Extra time phases — so you can manage multiple matches without losing track.",
+      "Built out of a real need at the table. Multi Rounds lets you run up to four independent timers simultaneously — each with its own Setup, Main, and Extra time phases — so you can manage multiple matches without losing track.",
     tags: ["React 19", "TypeScript", "Tailwind CSS v4"],
     status: "Live",
     image: "/multirounds.png",

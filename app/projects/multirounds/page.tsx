@@ -120,7 +120,7 @@ export default function MultiroundsPage() {
             </div>
 
             <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-              Focus Rounds
+              Multi Rounds
               <span className={`mt-2 block ${theme.heroSpan}`}>
                 Phase-based timer for TCG tournaments
               </span>
@@ -186,7 +186,7 @@ export default function MultiroundsPage() {
               A timer as a sequence of structured phases
             </h2>
             <p className={`mb-6 text-sm leading-6 ${theme.muted}`}>
-              Instead of a simple countdown, Focus Rounds models each timer as a
+              Instead of a simple countdown, Multi Rounds models each timer as a
               flow that mirrors how real tournaments actually operate.
             </p>
             <div className="flex items-center gap-2 flex-wrap">
@@ -284,7 +284,7 @@ export default function MultiroundsPage() {
               >
                 <p className={theme.bodyText}>
                   <span className={theme.subtle}>key:</span>{" "}
-                  focus-rounds:tcg:counter:
+                  multi-rounds:tcg:counter:
                   <span className={theme.accent}>&lt;id&gt;</span>
                 </p>
                 <p className={`mt-4 ${theme.subtle}`}>// Defaults</p>

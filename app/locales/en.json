@@ -70,5 +70,123 @@
     "email_btn": "Let's talk",
     "linkedin_btn": "LinkedIn",
     "github_btn": "GitHub"
+  },
+  "projects_page": {
+    "back": "← Back",
+    "title": "Projects",
+    "tagline": "Things I've built",
+    "description": "A curated selection of products and experiments I've designed and engineered.",
+    "cta": "View case study",
+    "items": {
+      "multirounds": {
+        "name": "Multi Rounds",
+        "tagline": "Phase-based timer for TCG tournaments",
+        "description": "Built out of a real need at the table. Multi Rounds lets you run up to four independent timers simultaneously — each with its own Setup, Main, and Extra time phases — so you can manage multiple matches without losing track.",
+        "status": "Live"
+      }
+    }
+  },
+  "multirounds_page": {
+    "back": "← Projects",
+    "badge": "TCG · Multi-Timer · Web App",
+    "title": "Multi Rounds",
+    "hero_span": "Phase-based timer for TCG tournaments",
+    "hero_description": "A multi-timer web application built for Trading Card Game tournaments and structured time workflows. Run up to four independent timers simultaneously, each with its own phase sequence, configuration, and persistent state.",
+    "phases": [
+      { "name": "Setup", "desc": "Preparation before the round" },
+      { "name": "Main", "desc": "Primary round duration" },
+      { "name": "Extra", "desc": "Overtime phase" },
+      { "name": "Idle", "desc": "Timer at rest" }
+    ],
+    "problem": {
+      "label": "The Problem",
+      "heading": "Generic timers fail in real tournaments",
+      "items": [
+        "No concept of phases — setup, round, extra time",
+        "Poor readability during live matches",
+        "No support for multiple simultaneous games",
+        "Friction when adjusting time mid-game"
+      ]
+    },
+    "idea": {
+      "label": "The Idea",
+      "heading": "A timer as a sequence of structured phases",
+      "description": "Instead of a simple countdown, Multi Rounds models each timer as a flow that mirrors how real tournaments actually operate."
+    },
+    "features": {
+      "label": "Key Features",
+      "heading": "Everything needed for live timing",
+      "items": [
+        { "title": "Multi-Timer System", "desc": "Up to 4 fully independent timers running simultaneously. Dynamic layout splits the screen automatically as timers are added." },
+        { "title": "Phase-Based Flow", "desc": "Each timer follows Setup → Main → Extra → Idle. Phases transition automatically on completion, mirroring real tournament flow." },
+        { "title": "Inline Editing", "desc": "Click to edit the timer name or adjust hours, minutes, and seconds directly — no modal interruptions during live use." },
+        { "title": "Persistent State", "desc": "Configuration survives page reloads via localStorage. Each counter stores its own durations and title under a unique key." },
+        { "title": "Responsive Layout", "desc": "UI adapts as more timers are added. Font sizes scale with container width to keep readability with 4 timers on screen." },
+        { "title": "Single-Screen Model", "desc": "No navigation required. All controls are immediately accessible — designed for fast interaction under pressure." }
+      ]
+    },
+    "tech": {
+      "label": "Technical Approach",
+      "heading": "Architecture",
+      "hook": {
+        "title": "useTcgCounter hook",
+        "desc": "Each timer is powered by a dedicated React hook that encapsulates state management, countdown logic, phase transitions, and persistence.",
+        "persisted_comment": "// Persisted state",
+        "runtime_comment": "// Runtime state"
+      },
+      "persistence": {
+        "title": "Persistence",
+        "desc": "Each timer stores its configuration under a unique key with safe fallbacks for malformed data.",
+        "key_label": "key:",
+        "defaults_comment": "// Defaults"
+      },
+      "phase_seq": {
+        "title": "Phase Sequencing"
+      }
+    },
+    "decisions": {
+      "label": "Design Decisions",
+      "heading": "Why it works this way",
+      "items": [
+        { "title": "Phase-Based Model", "desc": "Chosen to reflect real-world tournament flow rather than a generic countdown." },
+        { "title": "Independent Timer Instances", "desc": "Each timer is isolated to avoid shared state complexity and ensure reliability." },
+        { "title": "Inline Editing", "desc": "Removes friction and allows quick adjustments during live matches." },
+        { "title": "Local Persistence", "desc": "Avoids login requirements while preserving user configurations between sessions." }
+      ]
+    },
+    "challenges": {
+      "label": "Challenges",
+      "items": [
+        "Managing multiple independent timers without state conflicts",
+        "Keeping UI readable across dynamic layouts",
+        "Designing a flexible yet simple phase system",
+        "Ensuring smooth transitions between phases"
+      ]
+    },
+    "outcome": {
+      "label": "Outcome",
+      "items": [
+        "Improves clarity and timing consistency during tournaments",
+        "Reduces manual overhead for organizers and players",
+        "Supports real-world multi-match workflows",
+        "Demonstrates product thinking and UX design under constraints"
+      ]
+    },
+    "future": {
+      "label": "What's Next",
+      "heading": "Future improvements",
+      "items": [
+        "Fullscreen mode for tournament displays",
+        "Sound and visual alerts",
+        "Presets and saved configurations",
+        "Analytics integration",
+        "Monetization — donations / premium features"
+      ]
+    },
+    "reflection": {
+      "label": "Reflection",
+      "body": "This project started as a personal need and evolved into a focused product. It highlights the importance of building from real use cases, designing for context, and keeping interfaces simple under pressure.",
+      "cta": "View live project →"
+    }
   }
 }

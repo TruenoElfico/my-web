@@ -37,7 +37,7 @@ export default function Hero({ badge, hero, card, theme }: Props) {
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="#work"
+              href="/projects"
               className="rounded-2xl bg-[#69E8FF] px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.02]"
             >
               {hero.cta_work}

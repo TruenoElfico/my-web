@@ -1,6 +1,7 @@
 import Image from "next/image";
 import en from "../../locales/en.json";
 import { ServicesTheme } from "./theme";
+import Container from "./ui/Container";
 
 type HeroT = typeof en.services_page.hero;
 
@@ -23,7 +24,10 @@ export default function ServicesHero({ hero, theme }: Props) {
       {theme.heroOverlay && <div className={`absolute inset-0 ${theme.heroOverlay}`} aria-hidden="true" />}
 
       <div className="relative z-10 flex flex-1 items-center">
-        <div className="mx-auto grid w-full max-w-[1440px] gap-10 px-6 pb-12 pt-[calc(var(--services-nav-h)+2rem)] md:px-10 lg:grid-cols-[1fr_1.35fr] lg:items-center lg:gap-6">
+        <Container
+          wide
+          className="grid gap-10 pb-12 pt-[calc(var(--services-nav-h)+2rem)] lg:grid-cols-[1fr_1.35fr] lg:items-center lg:gap-6"
+        >
           <div>
             <span className={`inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium ${theme.chip}`}>
               {hero.badge}
@@ -70,7 +74,7 @@ export default function ServicesHero({ hero, theme }: Props) {
               priority
             />
           </div>
-        </div>
+        </Container>
       </div>
 
       <a

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import en from "../../locales/en.json";
+import Container from "./ui/Container";
 
 type SemanticT = typeof en.services_page.semantic;
 
@@ -16,11 +17,11 @@ export default function SemanticFoundationSection({ semantic }: Props) {
       <Image src="/services/semantic-web.png" alt="" fill className="object-cover" aria-hidden="true" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#0B1220] via-[#0B1220]/70 to-transparent" aria-hidden="true" />
 
-      <div className="relative mx-auto grid max-w-[1200px] gap-10 px-6 py-16 md:px-10 md:py-24 lg:grid-cols-2 lg:items-center lg:py-28">
+      <Container className="relative grid gap-10 py-16 md:py-24 lg:grid-cols-2 lg:items-center lg:py-28">
         <div>
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#69E8FF]">{semantic.eyebrow}</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">{semantic.heading1}</h2>
-          <h2 className="text-3xl font-semibold tracking-tight text-[#69E8FF] md:text-4xl">{semantic.heading2}</h2>
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">{semantic.heading1}</h2>
+          <h2 className="text-4xl font-semibold tracking-tight text-[#69E8FF] md:text-5xl">{semantic.heading2}</h2>
           <p className="mt-5 max-w-md leading-7 text-white/70">{semantic.description}</p>
           <p className="mt-6 text-sm text-white/60">{semantic.sub}</p>
 
@@ -46,7 +47,7 @@ export default function SemanticFoundationSection({ semantic }: Props) {
             className="mx-auto h-auto w-full max-w-md"
           />
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

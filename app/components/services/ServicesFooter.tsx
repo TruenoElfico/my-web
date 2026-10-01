@@ -1,5 +1,6 @@
 import en from "../../locales/en.json";
 import { ServicesTheme } from "./theme";
+import Container from "./ui/Container";
 import SocialIcon from "./ui/SocialIcon";
 
 type FooterT = typeof en.services_page.footer;
@@ -18,7 +19,7 @@ interface Props {
 export default function ServicesFooter({ footer, links, theme }: Props) {
   return (
     <footer className={theme.footerBg}>
-      <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-6 px-6 py-10 md:flex-row md:justify-between md:px-10">
+      <Container className="flex flex-col items-center gap-6 py-10 md:flex-row md:justify-between">
         <p className={`text-sm font-semibold ${theme.heading}`}>{footer.name}</p>
 
         <ul className="flex flex-wrap items-center justify-center gap-6">
@@ -39,7 +40,7 @@ export default function ServicesFooter({ footer, links, theme }: Props) {
             {footer.siteLink.label}
           </a>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

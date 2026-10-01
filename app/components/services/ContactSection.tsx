@@ -2,6 +2,7 @@ import Image from "next/image";
 import en from "../../locales/en.json";
 import { ServicesTheme } from "./theme";
 import ContactCard from "./ui/ContactCard";
+import Container from "./ui/Container";
 
 type ContactT = typeof en.services_page.contact;
 
@@ -16,10 +17,10 @@ export default function ContactSection({ contact, theme }: Props) {
       <Image src="/services/contacto.png" alt="" fill className="object-cover" aria-hidden="true" />
       {theme.contactOverlay && <div className={`absolute inset-0 ${theme.contactOverlay}`} aria-hidden="true" />}
 
-      <div className="relative mx-auto grid max-w-[1200px] gap-10 px-6 py-16 md:px-10 md:py-24 lg:grid-cols-2 lg:items-center">
+      <Container className="relative grid gap-10 py-16 md:py-24 lg:grid-cols-2 lg:items-center">
         <div>
           <p className={`text-sm font-medium uppercase tracking-[0.2em] ${theme.eyebrow}`}>{contact.eyebrow}</p>
-          <h2 className={`mt-3 text-3xl font-semibold tracking-tight md:text-4xl ${theme.heading}`}>
+          <h2 className={`mt-3 text-4xl font-semibold tracking-tight md:text-5xl ${theme.heading}`}>
             {contact.heading}
           </h2>
           <p className={`mt-4 max-w-md leading-7 ${theme.body}`}>{contact.description}</p>
@@ -42,7 +43,7 @@ export default function ContactSection({ contact, theme }: Props) {
             <ContactCard key={card.label} icon={card.icon} label={card.label} theme={theme} />
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

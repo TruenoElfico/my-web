@@ -1,6 +1,7 @@
 import en from "../../locales/en.json";
 import { ServicesTheme } from "./theme";
 import ComparisonTable from "./ui/ComparisonTable";
+import Container from "./ui/Container";
 
 type ComparisonT = typeof en.services_page.comparison;
 
@@ -11,11 +12,11 @@ interface Props {
 
 export default function ComparisonSection({ comparison, theme }: Props) {
   return (
-    <section id="comparativa" className="mx-auto max-w-[1200px] px-6 pb-16 md:px-10 lg:pb-24">
+    <Container as="section" id="comparativa" className="pb-16 lg:pb-24">
       <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
         <div>
           <p className={`text-sm font-medium uppercase tracking-[0.2em] ${theme.eyebrow}`}>{comparison.eyebrow}</p>
-          <h2 className={`mt-3 text-3xl font-semibold tracking-tight md:text-4xl ${theme.heading}`}>
+          <h2 className={`mt-3 text-4xl font-semibold tracking-tight md:text-5xl ${theme.heading}`}>
             {comparison.heading}
           </h2>
         </div>
@@ -25,6 +26,6 @@ export default function ComparisonSection({ comparison, theme }: Props) {
       <div className="mt-8">
         <ComparisonTable columns={comparison.columns} rows={comparison.rows} theme={theme} />
       </div>
-    </section>
+    </Container>
   );
 }

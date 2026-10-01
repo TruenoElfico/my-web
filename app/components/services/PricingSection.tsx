@@ -1,6 +1,7 @@
 import Image from "next/image";
 import en from "../../locales/en.json";
 import { ServicesTheme } from "./theme";
+import Container from "./ui/Container";
 import ServiceCard from "./ui/ServiceCard";
 
 type PricingT = typeof en.services_page.pricing;
@@ -14,11 +15,11 @@ interface Props {
 
 export default function PricingSection({ pricing, theme, showComparison, onToggleComparison }: Props) {
   return (
-    <section id="servicios" className="mx-auto max-w-[1200px] px-6 py-16 md:px-10 lg:py-24">
+    <Container as="section" id="servicios" className="py-16 lg:py-24">
       <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
         <div>
           <p className={`text-sm font-medium uppercase tracking-[0.2em] ${theme.eyebrow}`}>{pricing.eyebrow}</p>
-          <h2 className={`mt-3 text-3xl font-semibold tracking-tight md:text-4xl ${theme.heading}`}>
+          <h2 className={`mt-3 text-4xl font-semibold tracking-tight md:text-5xl ${theme.heading}`}>
             {pricing.heading}
           </h2>
         </div>
@@ -60,6 +61,6 @@ export default function PricingSection({ pricing, theme, showComparison, onToggl
           {showComparison ? pricing.viewLess : pricing.viewAll}
         </button>
       </div>
-    </section>
+    </Container>
   );
 }

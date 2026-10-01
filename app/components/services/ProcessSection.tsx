@@ -1,5 +1,6 @@
 import en from "../../locales/en.json";
 import { ServicesTheme } from "./theme";
+import Container from "./ui/Container";
 import ProcessStep from "./ui/ProcessStep";
 
 type ProcessT = typeof en.services_page.process;
@@ -11,11 +12,11 @@ interface Props {
 
 export default function ProcessSection({ process, theme }: Props) {
   return (
-    <section id="proceso" className="mx-auto max-w-[1200px] px-6 py-16 md:px-10 lg:py-24">
+    <Container as="section" id="proceso" className="py-16 lg:py-24">
       <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
         <div>
           <p className={`text-sm font-medium uppercase tracking-[0.2em] ${theme.eyebrow}`}>{process.eyebrow}</p>
-          <h2 className={`mt-3 text-3xl font-semibold tracking-tight md:text-4xl ${theme.heading}`}>
+          <h2 className={`mt-3 text-4xl font-semibold tracking-tight md:text-5xl ${theme.heading}`}>
             {process.heading}
           </h2>
           <p className={`mt-5 max-w-md leading-7 ${theme.body}`}>{process.description}</p>
@@ -34,6 +35,6 @@ export default function ProcessSection({ process, theme }: Props) {
           ))}
         </div>
       </div>
-    </section>
+    </Container>
   );
 }

@@ -1,6 +1,7 @@
 import en from "../../locales/en.json";
 import { servicesThemes } from "./theme";
 import CompanyBadge from "./ui/CompanyBadge";
+import Container from "./ui/Container";
 
 const badgeTheme = servicesThemes.dark;
 
@@ -15,10 +16,10 @@ interface Props {
 export default function AboutSection({ about }: Props) {
   return (
     <section id="sobre-mi" className="bg-[#0B1220] text-white">
-      <div className="mx-auto grid max-w-[1200px] gap-10 px-6 py-16 md:px-10 md:py-24 lg:grid-cols-2 lg:items-center">
+      <Container className="grid gap-10 py-16 md:py-24 lg:grid-cols-2 lg:items-center">
         <div>
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#69E8FF]">{about.eyebrow}</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
             {about.heading1}
             <span className="block">{about.heading2}</span>
           </h2>
@@ -43,7 +44,7 @@ export default function AboutSection({ about }: Props) {
             />
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

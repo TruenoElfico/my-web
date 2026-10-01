@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import en from "../../locales/en.json";
 import { ServicesTheme } from "./theme";
+import Container from "./ui/Container";
 
 type NavT = typeof en.services_page.nav;
 
@@ -42,10 +43,7 @@ export default function ServicesNav({ nav, links, theme, isDark, onToggleTheme, 
         scrolled ? `${theme.navBg} shadow-sm` : theme.navBgFloating
       }`}
     >
-      <nav
-        aria-label="Primary"
-        className="mx-auto flex h-full max-w-[1200px] items-center justify-between gap-6 px-6 md:px-10"
-      >
+      <Container as="nav" ariaLabel="Primary" className="flex h-full items-center justify-between gap-6">
         <a href="#top" className={`text-xl font-bold tracking-tight ${theme.heading}`}>
           Braulio Romero
         </a>
@@ -84,7 +82,7 @@ export default function ServicesNav({ nav, links, theme, isDark, onToggleTheme, 
             {nav.cta}
           </a>
         </div>
-      </nav>
+      </Container>
     </header>
   );
 }

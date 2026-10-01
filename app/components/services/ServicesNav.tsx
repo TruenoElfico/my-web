@@ -44,11 +44,11 @@ export default function ServicesNav({ nav, links, theme, isDark, onToggleTheme, 
       }`}
     >
       <Container as="nav" ariaLabel="Primary" className="flex h-full items-center justify-between gap-6">
-        <a href="#top" className={`text-xl font-bold tracking-tight ${theme.heading}`}>
+        <a href="#top" className={`shrink-0 whitespace-nowrap text-base font-bold tracking-tight sm:text-xl ${theme.heading}`}>
           Braulio Romero
         </a>
 
-        <ul className="hidden items-center gap-7 md:flex">
+        <ul className="hidden items-center gap-6 lg:flex">
           {links.map((link) => (
             <li key={link.href}>
               <a href={link.href} className={`text-sm font-medium transition ${theme.navLink}`}>

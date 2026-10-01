@@ -11,7 +11,7 @@ interface Props {
 
 export default function ProcessStep({ number, icon, title, theme, showArrow }: Props) {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center justify-center gap-4 sm:justify-start">
       <div className="flex flex-col items-center gap-2 text-center">
         <div className={`flex h-12 w-12 items-center justify-center rounded-full ${theme.iconCircle}`}>
           <Image src={icon} alt="" width={22} height={22} />

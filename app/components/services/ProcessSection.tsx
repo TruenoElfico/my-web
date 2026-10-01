@@ -25,7 +25,10 @@ export default function ProcessSection({ process, theme }: Props) {
       </Reveal>
 
       <Reveal delay={0.1} className={`mt-10 rounded-2xl p-6 md:p-8 ${theme.cardBg}`}>
-        <StaggerGroup className="flex flex-wrap items-start justify-between gap-x-4 gap-y-8" stagger={0.12}>
+        <StaggerGroup
+          className="grid grid-cols-1 gap-y-8 sm:flex sm:flex-wrap sm:items-start sm:justify-between sm:gap-x-4"
+          stagger={0.12}
+        >
           {process.steps.map((step, i) => (
             <StaggerItem key={step.number}>
               <ProcessStep

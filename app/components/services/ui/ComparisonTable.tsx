@@ -47,7 +47,7 @@ export default function ComparisonTable({ columns, rows, theme }: Props) {
           {rows.map((row) => (
             <tr
               key={row.label}
-              className={`transition ${row.highlight ? theme.tableHighlight : theme.tableRowHover}`}
+              className={`transition ${row.highlight ? `text-base font-bold ${theme.tableHighlight}` : theme.tableRowHover}`}
             >
               <th scope="row" className={`px-5 py-3 text-left font-medium ${row.highlight ? "" : theme.body}`}>
                 {row.label}

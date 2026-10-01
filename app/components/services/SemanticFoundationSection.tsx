@@ -17,7 +17,7 @@ export default function SemanticFoundationSection({ semantic }: Props) {
       <Image src="/services/semantic-web.png" alt="" fill className="object-cover" aria-hidden="true" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#0B1220] via-[#0B1220]/70 to-transparent" aria-hidden="true" />
 
-      <Container className="relative grid gap-10 py-16 md:py-24 lg:grid-cols-2 lg:items-center lg:py-28">
+      <Container className="relative grid gap-10 py-12 md:py-16 lg:grid-cols-2 lg:items-center">
         <div>
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#69E8FF]">{semantic.eyebrow}</p>
           <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">{semantic.heading1}</h2>

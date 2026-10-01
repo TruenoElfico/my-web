@@ -1,8 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import en from "../../locales/en.json";
 import { servicesThemes } from "./theme";
 import CompanyBadge from "./ui/CompanyBadge";
 import Container from "./ui/Container";
+import { Reveal, StaggerGroup, StaggerItem } from "./motion";
 
 const badgeTheme = servicesThemes.dark;
 
@@ -18,7 +21,7 @@ export default function AboutSection({ about }: Props) {
   return (
     <section id="sobre-mi" className="bg-[#0B1220] text-white">
       <Container className="grid gap-10 py-16 md:py-24 lg:grid-cols-2 lg:items-center">
-        <div>
+        <Reveal>
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#69E8FF]">{about.eyebrow}</p>
           <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
             {about.heading1}
@@ -32,21 +35,22 @@ export default function AboutSection({ about }: Props) {
           >
             {about.cta} →
           </Link>
-        </div>
+        </Reveal>
 
-        <div className="space-y-3">
+        <StaggerGroup className="space-y-3" stagger={0.1} delayChildren={0.1}>
           {about.badges.map((badge) => (
-            <CompanyBadge
-              key={badge.company}
-              icon={badge.icon}
-              iconWidth={badge.iconWidth}
-              iconHeight={badge.iconHeight}
-              company={badge.company}
-              role={badge.role}
-              theme={badgeTheme}
-            />
+            <StaggerItem key={badge.company}>
+              <CompanyBadge
+                icon={badge.icon}
+                iconWidth={badge.iconWidth}
+                iconHeight={badge.iconHeight}
+                company={badge.company}
+                role={badge.role}
+                theme={badgeTheme}
+              />
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGroup>
       </Container>
     </section>
   );

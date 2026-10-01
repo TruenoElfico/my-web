@@ -1,7 +1,9 @@
 "use client";
 
 import { useId, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { ServicesTheme } from "../theme";
+import { easeOut } from "../motion";
 
 interface Props {
   question: string;
@@ -37,11 +39,20 @@ export default function FAQItem({ question, answer, theme }: Props) {
           <path d="M12 5v14M5 12h14" />
         </svg>
       </button>
-      {open && (
-        <p id={panelId} className={`pb-4 text-sm leading-6 ${theme.body}`}>
-          {answer}
-        </p>
-      )}
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            id={panelId}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.35, ease: easeOut }}
+            className="overflow-hidden"
+          >
+            <p className={`pb-4 text-sm leading-6 ${theme.body}`}>{answer}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

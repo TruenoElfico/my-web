@@ -40,8 +40,6 @@ export default function ServicesPageClient() {
     { label: t.nav.contacto, href: "#contacto" },
   ];
 
-  const footerLinks = SHOW_WORK ? t.footer.links : t.footer.links.filter((link) => link.href !== "#trabajo");
-
   return (
     <main
       className={`min-h-screen transition-colors duration-300 ${theme.pageBg}`}
@@ -72,7 +70,7 @@ export default function ServicesPageClient() {
       <AboutSection about={t.about} />
       <FAQSection faq={t.faq} theme={theme} />
       <ContactSection contact={t.contact} theme={theme} />
-      <ServicesFooter footer={t.footer} links={footerLinks} theme={theme} />
+      <ServicesFooter footer={t.footer} theme={theme} />
     </main>
   );
 }

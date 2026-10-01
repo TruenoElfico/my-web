@@ -13,9 +13,9 @@ export default function SocialIcon({ icon, label, href }: Props) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="flex h-9 w-9 items-center justify-center rounded-full opacity-70 transition hover:opacity-100"
+      className="flex h-11 w-11 items-center justify-center rounded-full opacity-70 transition hover:opacity-100"
     >
-      <Image src={icon} alt="" width={18} height={18} />
+      <Image src={icon} alt="" width={26} height={26} />
     </a>
   );
 }

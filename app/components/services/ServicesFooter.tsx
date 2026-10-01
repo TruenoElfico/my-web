@@ -5,32 +5,16 @@ import SocialIcon from "./ui/SocialIcon";
 
 type FooterT = typeof en.services_page.footer;
 
-interface NavLink {
-  label: string;
-  href: string;
-}
-
 interface Props {
   footer: FooterT;
-  links: NavLink[];
   theme: ServicesTheme;
 }
 
-export default function ServicesFooter({ footer, links, theme }: Props) {
+export default function ServicesFooter({ footer, theme }: Props) {
   return (
     <footer className={theme.footerBg}>
       <Container className="flex flex-col items-center gap-6 py-10 md:flex-row md:justify-between">
-        <p className={`text-sm font-semibold ${theme.heading}`}>{footer.name}</p>
-
-        <ul className="flex flex-wrap items-center justify-center gap-6">
-          {links.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} className={`text-sm transition ${theme.navLink}`}>
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <p className={`text-xl font-bold tracking-tight ${theme.heading}`}>{footer.name}</p>
 
         <div className="flex items-center gap-4">
           {footer.socials.map((social) => (

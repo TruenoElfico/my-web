@@ -16,8 +16,8 @@ export default function ProcessStep({ number, icon, title, theme, showArrow }: P
         <div className={`flex h-12 w-12 items-center justify-center rounded-full ${theme.iconCircle}`}>
           <Image src={icon} alt="" width={22} height={22} />
         </div>
-        <p className={`text-xs font-medium ${theme.faint}`}>{number}</p>
-        <p className={`text-sm font-medium ${theme.heading}`}>{title}</p>
+        <p className={`text-lg font-bold ${theme.heading}`}>{number}</p>
+        <p className={`text-sm ${theme.faint}`}>{title}</p>
       </div>
       {showArrow && (
         <svg

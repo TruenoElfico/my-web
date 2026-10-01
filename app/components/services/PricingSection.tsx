@@ -30,21 +30,21 @@ export default function PricingSection({ pricing, theme, showComparison, onToggl
         {pricing.cards.map((card) => (
           <ServiceCard
             key={card.name}
-            icon={card.icon}
             name={card.name}
             price={card.price}
             priceSuffix={card.priceSuffix}
+            description={card.description}
             features={card.features}
-            ctaLabel={pricing.detailsCta}
             theme={theme}
+            highlighted={card.highlighted}
           />
         ))}
       </div>
 
-      <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+      <div className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
         {pricing.chips.map((chip) => (
-          <div key={chip.label} className={`flex items-center gap-2 text-sm ${theme.faint}`}>
-            <Image src={chip.icon} alt="" width={16} height={16} />
+          <div key={chip.label} className={`flex items-center gap-2.5 text-base font-semibold ${theme.heading}`}>
+            <Image src={chip.icon} alt="" width={22} height={22} />
             {chip.label}
           </div>
         ))}

@@ -314,7 +314,9 @@
             "Optimized for search engines",
             "Form / WhatsApp",
             "3-5 day delivery"
-          ]
+          ],
+          "description": "A professional, effective page to introduce your business.",
+          "highlighted": true
         },
         {
           "icon": "/services/svg/10-negocio.svg",
@@ -327,7 +329,9 @@
             "Google Analytics 4",
             "Form / WhatsApp",
             "1-2 week delivery"
-          ]
+          ],
+          "description": "A complete site to showcase your company and services.",
+          "highlighted": false
         },
         {
           "icon": "/services/svg/11-crecimiento-plan.svg",
@@ -340,7 +344,9 @@
             "GA4 + Tag Manager",
             "Events and conversions",
             "2-3 week delivery"
-          ]
+          ],
+          "description": "A site built to generate opportunities.",
+          "highlighted": false
         }
       ],
       "chips": [

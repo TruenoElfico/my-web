@@ -314,7 +314,9 @@
             "Optimizado para buscadores",
             "Formulario / WhatsApp",
             "Entrega en 3-5 días"
-          ]
+          ],
+          "description": "Una página profesional y efectiva para dar a conocer tu negocio.",
+          "highlighted": true
         },
         {
           "icon": "/services/svg/10-negocio.svg",
@@ -327,7 +329,9 @@
             "Google Analytics 4",
             "Formulario / WhatsApp",
             "Entrega en 1-2 semanas"
-          ]
+          ],
+          "description": "Un sitio completo para presentar tu empresa y servicios.",
+          "highlighted": false
         },
         {
           "icon": "/services/svg/11-crecimiento-plan.svg",
@@ -340,7 +344,9 @@
             "GA4 + Tag Manager",
             "Eventos y conversiones",
             "Entrega en 2-3 semanas"
-          ]
+          ],
+          "description": "Un sitio orientado a generar oportunidades.",
+          "highlighted": false
         }
       ],
       "chips": [

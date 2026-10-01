@@ -58,6 +58,7 @@ export default function ServicesPageClient() {
       />
       <ServicesHero hero={t.hero} theme={theme} />
       <WhyWebsite why={t.why} theme={theme} />
+      <hr className={`border-t ${theme.divider}`} />
       <PricingSection
         pricing={t.pricing}
         theme={theme}

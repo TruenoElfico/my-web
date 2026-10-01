@@ -1,3 +1,4 @@
+import Link from "next/link";
 import en from "../../locales/en.json";
 import { servicesThemes } from "./theme";
 import CompanyBadge from "./ui/CompanyBadge";
@@ -25,12 +26,12 @@ export default function AboutSection({ about }: Props) {
           </h2>
           <p className="mt-5 max-w-md leading-7 text-white/70">{about.body1}</p>
           <p className="mt-4 max-w-md leading-7 text-white/70">{about.body2}</p>
-          <a
-            href="#contacto"
+          <Link
+            href="/"
             className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#69E8FF] px-6 py-3 text-sm font-medium text-[#0B1220] transition hover:brightness-95"
           >
             {about.cta} →
-          </a>
+          </Link>
         </div>
 
         <div className="space-y-3">
@@ -38,6 +39,8 @@ export default function AboutSection({ about }: Props) {
             <CompanyBadge
               key={badge.company}
               icon={badge.icon}
+              iconWidth={badge.iconWidth}
+              iconHeight={badge.iconHeight}
               company={badge.company}
               role={badge.role}
               theme={badgeTheme}

@@ -591,19 +591,25 @@
       "cta": "More about me",
       "badges": [
         {
-          "icon": "/services/svg/24-thomson-reuters.svg",
+          "icon": "/services/logos/thomson-reuters-mark.svg",
           "company": "Thomson Reuters",
-          "role": "Design Systems · Frontend"
+          "role": "Design Systems · Frontend",
+          "iconWidth": 135,
+          "iconHeight": 135
         },
         {
-          "icon": "/services/svg/25-home-depot.svg",
+          "icon": "/services/logos/home-depot.svg",
           "company": "The Home Depot México",
-          "role": "UX/UI · Frontend"
+          "role": "UX/UI · Frontend",
+          "iconWidth": 227,
+          "iconHeight": 228
         },
         {
-          "icon": "/services/svg/26-reservamos.svg",
+          "icon": "/services/logos/reservamos-icon.png",
           "company": "Reservamos",
-          "role": "Frontend · React / Next.js"
+          "role": "Frontend · React / Next.js",
+          "iconWidth": 128,
+          "iconHeight": 128
         }
       ]
     },

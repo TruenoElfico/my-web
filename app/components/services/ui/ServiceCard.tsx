@@ -14,7 +14,7 @@ interface Props {
 export default function ServiceCard({ icon, name, price, priceSuffix, features, ctaLabel, theme }: Props) {
   return (
     <div className={`flex flex-col rounded-3xl p-6 ${theme.cardBg}`}>
-      <div className={`flex h-10 w-10 items-center justify-center rounded-xl ${theme.iconCircle}`}>
+      <div className={`flex h-10 w-10 items-center justify-center rounded-full ${theme.iconCircle}`}>
         <Image src={icon} alt="" width={20} height={20} />
       </div>
 

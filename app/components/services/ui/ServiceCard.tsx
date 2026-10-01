@@ -1,4 +1,8 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { ServicesTheme } from "../theme";
+import { easeOut } from "../motion";
 
 interface Props {
   name: string;
@@ -20,7 +24,13 @@ export default function ServiceCard({
   highlighted = false,
 }: Props) {
   return (
-    <div className={`flex flex-col rounded-3xl p-6 ${highlighted ? theme.cardHighlight : theme.cardBg}`}>
+    <motion.div
+      className={`flex flex-col rounded-3xl p-6 transition-colors duration-300 ${
+        highlighted ? theme.cardHighlight : `${theme.cardBg} hover:border-[#69E8FF]/50`
+      }`}
+      whileHover={{ y: -4, scale: 1.015 }}
+      transition={{ duration: 0.25, ease: easeOut }}
+    >
       <h3 className={`text-lg font-semibold ${theme.heading}`}>{name}</h3>
       <p className={`mt-1 ${theme.faint}`}>
         <span className={`text-4xl font-bold ${theme.heading}`}>{price}</span>{" "}
@@ -38,6 +48,6 @@ export default function ServiceCard({
           </li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 }

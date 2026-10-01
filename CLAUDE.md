@@ -27,3 +27,8 @@ Single-page Next.js 16 portfolio site using the App Router. All meaningful code 
 - Brand color: `#69E8FF` (cyan). Referenced directly as Tailwind arbitrary values (`bg-[#69E8FF]`, `text-[#69E8FF]`) and as `--link` in CSS.
 - Dark background: `#0f1115`. Card surfaces: `#141821` / `bg-white/5`.
 - Path alias `@/*` maps to the repo root (e.g. `@/app/...`).
+
+## Git commit conventions
+
+- When committing a batch of changes, split them into multiple commits grouped by related content/feature rather than one large commit covering everything — the repo owner reviews commits individually before opening a PR.
+- Group by what the change is *about* (a component, a section, a bug fix), not by chronological order in the conversation. It's fine for a commit to carry a small incidental change (e.g. a one-line tweak that landed in the same diff hunk as the main change) — note that in the commit message rather than forcing a perfect split.

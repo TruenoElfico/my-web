@@ -4,7 +4,8 @@
 
 const light = {
   pageBg: "bg-white text-[#0B1220]",
-  navBg: "border-b border-gray-200 bg-white/80 backdrop-blur",
+  navBg: "border-b border-gray-200 bg-white/90 backdrop-blur-md",
+  navBgFloating: "border-b border-white/20 bg-white/40 backdrop-blur-md",
   navLink: "text-gray-600 hover:text-[#0B1220]",
   eyebrow: "text-cyan-700",
   heading: "text-[#0B1220]",
@@ -32,7 +33,8 @@ const light = {
 
 const dark = {
   pageBg: "bg-[#0f1115] text-white",
-  navBg: "border-b border-white/10 bg-[#0f1115]/80 backdrop-blur",
+  navBg: "border-b border-white/10 bg-[#0f1115]/90 backdrop-blur-md",
+  navBgFloating: "border-b border-white/10 bg-[#0f1115]/35 backdrop-blur-md",
   navLink: "text-white/70 hover:text-white",
   eyebrow: "text-[#69E8FF]",
   heading: "text-white",

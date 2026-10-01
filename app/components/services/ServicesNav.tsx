@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import en from "../../locales/en.json";
 import { ServicesTheme } from "./theme";
 
@@ -19,13 +22,31 @@ interface Props {
 }
 
 export default function ServicesNav({ nav, links, theme, isDark, onToggleTheme, lang, onToggleLang }: Props) {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // The nav always sits on a frosted glass strip — lighter while floating over
+  // the hero photo, fuller once scrolled onto the page's own background. The
+  // blur+tint gives consistent contrast regardless of what's behind it, so
+  // text stays on the normal theme colors the whole time instead of guessing
+  // the photo's local brightness.
   return (
-    <header className={`sticky top-0 z-50 h-[var(--services-nav-h)] ${theme.navBg}`}>
+    <header
+      className={`fixed inset-x-0 top-0 z-50 h-[var(--services-nav-h)] transition-colors duration-300 ${
+        scrolled ? `${theme.navBg} shadow-sm` : theme.navBgFloating
+      }`}
+    >
       <nav
         aria-label="Primary"
         className="mx-auto flex h-full max-w-[1200px] items-center justify-between gap-6 px-6 md:px-10"
       >
-        <a href="#top" className={`text-sm font-semibold ${theme.heading}`}>
+        <a href="#top" className={`text-xl font-bold tracking-tight ${theme.heading}`}>
           Braulio Romero
         </a>
 

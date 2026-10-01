@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import en from "../locales/en.json";
 import es from "../locales/es.json";
 import { useAppTheme } from "../providers/ThemeProvider";
 import { servicesThemes } from "../components/services/theme";
+import { easeOut } from "../components/services/motion";
 import ServicesNav from "../components/services/ServicesNav";
 import ServicesHero from "../components/services/ServicesHero";
 import WhyWebsite from "../components/services/WhyWebsite";
@@ -41,36 +43,51 @@ export default function ServicesPageClient() {
   ];
 
   return (
-    <main
-      className={`min-h-screen transition-colors duration-300 ${theme.pageBg}`}
-      style={{ "--services-nav-h": "72px" } as React.CSSProperties}
-    >
-      <ServicesNav
-        nav={t.nav}
-        links={navLinks}
-        theme={theme}
-        isDark={isDark}
-        onToggleTheme={toggleTheme}
-        lang={lang}
-        onToggleLang={toggleLang}
-      />
-      <ServicesHero hero={t.hero} theme={theme} />
-      <WhyWebsite why={t.why} theme={theme} />
-      <hr className={`border-t ${theme.divider}`} />
-      <PricingSection
-        pricing={t.pricing}
-        theme={theme}
-        showComparison={showComparison}
-        onToggleComparison={() => setShowComparison((prev) => !prev)}
-      />
-      {showComparison && <ComparisonSection comparison={t.comparison} theme={theme} />}
-      <SemanticFoundationSection semantic={t.semantic} />
-      <ProcessSection process={t.process} theme={theme} />
-      {SHOW_WORK && <WorkSection work={t.work} theme={theme} />}
-      <AboutSection about={t.about} />
-      <FAQSection faq={t.faq} theme={theme} />
-      <ContactSection contact={t.contact} theme={theme} />
-      <ServicesFooter footer={t.footer} theme={theme} />
-    </main>
+    <MotionConfig reducedMotion="user">
+      <main
+        className={`min-h-screen transition-colors duration-300 ${theme.pageBg}`}
+        style={{ "--services-nav-h": "72px" } as React.CSSProperties}
+      >
+        <ServicesNav
+          nav={t.nav}
+          links={navLinks}
+          theme={theme}
+          isDark={isDark}
+          onToggleTheme={toggleTheme}
+          lang={lang}
+          onToggleLang={toggleLang}
+        />
+        <ServicesHero hero={t.hero} theme={theme} />
+        <WhyWebsite why={t.why} theme={theme} />
+        <hr className={`border-t ${theme.divider}`} />
+        <PricingSection
+          pricing={t.pricing}
+          theme={theme}
+          showComparison={showComparison}
+          onToggleComparison={() => setShowComparison((prev) => !prev)}
+        />
+        <AnimatePresence initial={false}>
+          {showComparison && (
+            <motion.div
+              key="comparison"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.5, ease: easeOut }}
+              className="overflow-hidden"
+            >
+              <ComparisonSection comparison={t.comparison} theme={theme} />
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <SemanticFoundationSection semantic={t.semantic} />
+        <ProcessSection process={t.process} theme={theme} />
+        {SHOW_WORK && <WorkSection work={t.work} theme={theme} />}
+        <AboutSection about={t.about} />
+        <FAQSection faq={t.faq} theme={theme} />
+        <ContactSection contact={t.contact} theme={theme} />
+        <ServicesFooter footer={t.footer} theme={theme} />
+      </main>
+    </MotionConfig>
   );
 }

@@ -17,17 +17,30 @@ interface Props {
   onToggleComparison: () => void;
 }
 
-export default function PricingSection({ pricing, theme, showComparison, onToggleComparison }: Props) {
+export default function PricingSection({
+  pricing,
+  theme,
+  showComparison,
+  onToggleComparison,
+}: Props) {
   return (
     <Container as="section" id="servicios" className="py-16 lg:py-24">
       <Reveal className="grid gap-8 lg:grid-cols-2 lg:gap-16">
         <div>
-          <p className={`text-sm font-medium uppercase tracking-[0.2em] ${theme.eyebrow}`}>{pricing.eyebrow}</p>
-          <h2 className={`mt-3 text-4xl font-semibold tracking-tight md:text-5xl ${theme.heading}`}>
+          <p
+            className={`text-sm font-medium uppercase tracking-[0.2em] ${theme.eyebrow}`}
+          >
+            {pricing.eyebrow}
+          </p>
+          <h2
+            className={`mt-3 text-4xl font-semibold tracking-tight md:text-5xl ${theme.heading}`}
+          >
             {pricing.heading}
           </h2>
         </div>
-        <p className={`self-end leading-7 ${theme.body}`}>{pricing.description}</p>
+        <p className={`self-end leading-7 ${theme.body}`}>
+          {pricing.description}
+        </p>
       </Reveal>
 
       <StaggerGroup className="mt-10 grid gap-6 md:grid-cols-3" stagger={0.1}>
@@ -36,7 +49,6 @@ export default function PricingSection({ pricing, theme, showComparison, onToggl
             <ServiceCard
               name={card.name}
               price={card.price}
-              priceSuffix={card.priceSuffix}
               description={card.description}
               features={card.features}
               theme={theme}
@@ -46,9 +58,15 @@ export default function PricingSection({ pricing, theme, showComparison, onToggl
         ))}
       </StaggerGroup>
 
-      <Reveal className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4" delay={0.1}>
+      <Reveal
+        className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4"
+        delay={0.1}
+      >
         {pricing.chips.map((chip) => (
-          <div key={chip.label} className={`flex items-center gap-2.5 text-base font-semibold ${theme.heading}`}>
+          <div
+            key={chip.label}
+            className={`flex items-center gap-2.5 text-base font-semibold ${theme.heading}`}
+          >
             <Image src={chip.icon} alt="" width={22} height={22} />
             {chip.label}
           </div>

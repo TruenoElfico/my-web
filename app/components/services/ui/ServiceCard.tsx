@@ -7,7 +7,6 @@ import { easeOut } from "../motion";
 interface Props {
   name: string;
   price: string;
-  priceSuffix: string;
   description: string;
   features: string[];
   theme: ServicesTheme;
@@ -17,7 +16,6 @@ interface Props {
 export default function ServiceCard({
   name,
   price,
-  priceSuffix,
   description,
   features,
   theme,
@@ -32,10 +30,7 @@ export default function ServiceCard({
       transition={{ duration: 0.25, ease: easeOut }}
     >
       <h3 className={`text-lg font-semibold ${theme.heading}`}>{name}</h3>
-      <p className={`mt-1 ${theme.faint}`}>
-        <span className={`text-4xl font-bold ${theme.heading}`}>{price}</span>{" "}
-        <span className="text-sm">{priceSuffix}</span>
-      </p>
+      <p className={`mt-1 text-4xl font-bold ${theme.heading}`}>{price}</p>
       <p className={`mt-3 text-sm leading-6 ${theme.body}`}>{description}</p>
 
       <ul className="mt-5 space-y-2.5">

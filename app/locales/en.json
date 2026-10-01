@@ -336,7 +336,7 @@
         {
           "icon": "/services/svg/11-crecimiento-plan.svg",
           "name": "Growth",
-          "price": "$19,500+",
+          "price": "$19,500",
           "priceSuffix": "+ VAT",
           "features": [
             "6-10 pages",
@@ -502,9 +502,9 @@
         {
           "label": "Price",
           "values": [
-            "$5,500 + VAT",
-            "$10,500 + VAT",
-            "From $19,500 + VAT"
+            "$5,500",
+            "$10,500",
+            "From $19,500"
           ],
           "highlight": true
         }

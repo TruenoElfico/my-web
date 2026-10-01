@@ -45,7 +45,7 @@ export default function ServicesPageClient() {
   return (
     <MotionConfig reducedMotion="user">
       <main
-        className={`min-h-screen transition-colors duration-300 ${theme.pageBg}`}
+        className={`min-h-screen overflow-x-hidden transition-colors duration-300 ${theme.pageBg}`}
         style={{ "--services-nav-h": "72px" } as React.CSSProperties}
       >
         <ServicesNav
@@ -57,7 +57,7 @@ export default function ServicesPageClient() {
           lang={lang}
           onToggleLang={toggleLang}
         />
-        <ServicesHero hero={t.hero} theme={theme} />
+        <ServicesHero hero={t.hero} theme={theme} isDark={isDark} />
         <WhyWebsite why={t.why} theme={theme} />
         <hr className={`border-t ${theme.divider}`} />
         <PricingSection

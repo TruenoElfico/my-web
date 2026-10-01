@@ -35,17 +35,35 @@ interface RevealProps {
   y?: number;
   duration?: number;
   delay?: number;
+  /**
+   * "viewport" (default) animates the first time the element scrolls into
+   * view — right for anything below the fold. "mount" animates immediately
+   * on render instead — required for above-the-fold content (e.g. the
+   * hero), where whileInView's negative viewport margin can leave content
+   * stuck at opacity:0 on short mobile viewports since there's no scroll
+   * event left to trigger it.
+   */
+  trigger?: "viewport" | "mount";
 }
 
-// Fades + translates a block up into place the first time it scrolls into view.
-export function Reveal({ children, className, y = 18, duration = 0.55, delay = 0 }: RevealProps) {
+// Fades + translates a block up into place.
+export function Reveal({ children, className, y = 18, duration = 0.55, delay = 0, trigger = "viewport" }: RevealProps) {
+  const animate = { opacity: 1, y: 0 };
+  const transition = { duration, delay, ease: easeOut };
+  if (trigger === "mount") {
+    return (
+      <motion.div className={className} initial={{ opacity: 0, y }} animate={animate} transition={transition}>
+        {children}
+      </motion.div>
+    );
+  }
   return (
     <motion.div
       className={className}
       initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
+      whileInView={animate}
       viewport={viewportOnce}
-      transition={{ duration, delay, ease: easeOut }}
+      transition={transition}
     >
       {children}
     </motion.div>
@@ -57,20 +75,23 @@ interface StaggerGroupProps {
   className?: string;
   stagger?: number;
   delayChildren?: number;
+  /** See Reveal's trigger prop — "mount" is required for above-the-fold content. */
+  trigger?: "viewport" | "mount";
 }
 
 // Orchestrates a staggered reveal of its motion children (StaggerItem, or any
-// motion element using fadeUpItem/scaleFadeItem) the first time it scrolls
-// into view.
-export function StaggerGroup({ children, className, stagger = 0.1, delayChildren = 0 }: StaggerGroupProps) {
+// motion element using fadeUpItem/scaleFadeItem).
+export function StaggerGroup({ children, className, stagger = 0.1, delayChildren = 0, trigger = "viewport" }: StaggerGroupProps) {
+  const variants = staggerContainer(stagger, delayChildren);
+  if (trigger === "mount") {
+    return (
+      <motion.div className={className} initial="hidden" animate="show" variants={variants}>
+        {children}
+      </motion.div>
+    );
+  }
   return (
-    <motion.div
-      className={className}
-      initial="hidden"
-      whileInView="show"
-      viewport={viewportOnce}
-      variants={staggerContainer(stagger, delayChildren)}
-    >
+    <motion.div className={className} initial="hidden" whileInView="show" viewport={viewportOnce} variants={variants}>
       {children}
     </motion.div>
   );

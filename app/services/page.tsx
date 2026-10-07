@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ServicesPageClient from "./ServicesPageClient";
+import { servicesJsonLdScript } from "./structuredData";
 
 const BASE_URL = "https://truenoelfico.com";
 const PAGE_URL = `${BASE_URL}/services`;
@@ -38,5 +39,10 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
-  return <ServicesPageClient />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: servicesJsonLdScript() }} />
+      <ServicesPageClient />
+    </>
+  );
 }

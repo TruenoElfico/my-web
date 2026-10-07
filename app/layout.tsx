@@ -81,6 +81,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": `${BASE_URL}/#person`,
   name: "Braulio Romero",
   url: BASE_URL,
   email: "terrbete@gmail.com",

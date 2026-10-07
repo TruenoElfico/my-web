@@ -15,24 +15,24 @@ const BASE_URL = "https://truenoelfico.com";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Braulio Romero — UX Engineer & Frontend Developer",
+    default: "Braulio Romero — UX Engineer y Desarrollador Frontend",
     template: "%s | Braulio Romero",
   },
   description:
-    "Braulio Romero is a UX Engineer specializing in design systems, frontend architecture, and high-converting web experiences. Available for frontend, product, and web experience work.",
+    "Braulio Romero es UX Engineer especializado en sistemas de diseño, arquitectura frontend y experiencias web que convierten. Disponible para proyectos de frontend, producto y experiencia web.",
   keywords: [
     "Braulio Romero",
     "UX Engineer",
-    "Frontend Developer",
-    "Design Systems",
-    "React Developer",
-    "Next.js Developer",
-    "Frontend Architecture",
-    "Web Experience",
-    "Landing Pages",
-    "UI Engineering",
+    "Desarrollador Frontend",
+    "Desarrollo web",
+    "Diseño de páginas web",
+    "Sistemas de diseño",
+    "Desarrollador React",
+    "Desarrollador Next.js",
+    "Arquitectura frontend",
+    "Landing pages",
     "TypeScript",
-    "Accessibility",
+    "Accesibilidad web",
   ],
   authors: [{ name: "Braulio Romero", url: BASE_URL }],
   creator: "Braulio Romero",
@@ -53,26 +53,26 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "es_MX",
     url: BASE_URL,
     siteName: "Braulio Romero",
-    title: "Braulio Romero — UX Engineer & Frontend Developer",
+    title: "Braulio Romero — UX Engineer y Desarrollador Frontend",
     description:
-      "Braulio Romero is a UX Engineer specializing in design systems, frontend architecture, and high-converting web experiences.",
+      "UX Engineer especializado en sistemas de diseño, arquitectura frontend y experiencias web que convierten.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Braulio Romero — UX Engineer & Frontend Developer",
+        alt: "Braulio Romero — UX Engineer y Desarrollador Frontend",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Braulio Romero — UX Engineer & Frontend Developer",
+    title: "Braulio Romero — UX Engineer y Desarrollador Frontend",
     description:
-      "UX Engineer specializing in design systems, frontend architecture, and high-converting web experiences.",
+      "UX Engineer especializado en sistemas de diseño, arquitectura frontend y experiencias web que convierten.",
     images: ["/og-image.png"],
     creator: "@braulioromero",
   },
@@ -81,12 +81,13 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": `${BASE_URL}/#person`,
   name: "Braulio Romero",
   url: BASE_URL,
   email: "terrbete@gmail.com",
   jobTitle: "UX Engineer",
   description:
-    "UX Engineer specializing in design systems, frontend architecture, and high-converting web experiences.",
+    "UX Engineer especializado en sistemas de diseño, arquitectura frontend y experiencias web que convierten.",
   knowsAbout: [
     "React",
     "Next.js",
@@ -108,7 +109,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <meta name="theme-color" content="#0f1115" />
         <script

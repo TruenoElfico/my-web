@@ -93,10 +93,22 @@
     "hero_span": "Temporizador por fases para torneos de TCG",
     "hero_description": "Una aplicación web de múltiples temporizadores diseñada para torneos de juegos de cartas coleccionables y flujos de trabajo con tiempo estructurado. Ejecuta hasta cuatro temporizadores independientes simultáneamente, cada uno con su propia secuencia de fases, configuración y estado persistente.",
     "phases": [
-      { "name": "Configuración", "desc": "Preparación antes de la ronda" },
-      { "name": "Principal", "desc": "Duración principal de la ronda" },
-      { "name": "Tiempo Extra", "desc": "Fase de prórroga" },
-      { "name": "En Reposo", "desc": "Temporizador en descanso" }
+      {
+        "name": "Configuración",
+        "desc": "Preparación antes de la ronda"
+      },
+      {
+        "name": "Principal",
+        "desc": "Duración principal de la ronda"
+      },
+      {
+        "name": "Tiempo Extra",
+        "desc": "Fase de prórroga"
+      },
+      {
+        "name": "En Reposo",
+        "desc": "Temporizador en descanso"
+      }
     ],
     "problem": {
       "label": "El Problema",
@@ -117,12 +129,30 @@
       "label": "Características Clave",
       "heading": "Todo lo necesario para el tiempo en vivo",
       "items": [
-        { "title": "Sistema Multi-Temporizador", "desc": "Hasta 4 temporizadores completamente independientes en ejecución simultánea. El diseño dinámico divide la pantalla automáticamente a medida que se añaden temporizadores." },
-        { "title": "Flujo por Fases", "desc": "Cada temporizador sigue Configuración → Principal → Extra → En Reposo. Las fases transicionan automáticamente al completarse, reflejando el flujo real de los torneos." },
-        { "title": "Edición en Línea", "desc": "Haz clic para editar el nombre del temporizador o ajustar horas, minutos y segundos directamente — sin interrupciones modales durante el uso en vivo." },
-        { "title": "Estado Persistente", "desc": "La configuración sobrevive a las recargas de página mediante localStorage. Cada contador almacena sus propias duraciones y título bajo una clave única." },
-        { "title": "Diseño Responsivo", "desc": "La interfaz se adapta a medida que se añaden más temporizadores. Los tamaños de fuente escalan según el ancho del contenedor para mantener la legibilidad con 4 temporizadores en pantalla." },
-        { "title": "Modelo de Pantalla Única", "desc": "No se requiere navegación. Todos los controles son inmediatamente accesibles — diseñado para interacción rápida bajo presión." }
+        {
+          "title": "Sistema Multi-Temporizador",
+          "desc": "Hasta 4 temporizadores completamente independientes en ejecución simultánea. El diseño dinámico divide la pantalla automáticamente a medida que se añaden temporizadores."
+        },
+        {
+          "title": "Flujo por Fases",
+          "desc": "Cada temporizador sigue Configuración → Principal → Extra → En Reposo. Las fases transicionan automáticamente al completarse, reflejando el flujo real de los torneos."
+        },
+        {
+          "title": "Edición en Línea",
+          "desc": "Haz clic para editar el nombre del temporizador o ajustar horas, minutos y segundos directamente — sin interrupciones modales durante el uso en vivo."
+        },
+        {
+          "title": "Estado Persistente",
+          "desc": "La configuración sobrevive a las recargas de página mediante localStorage. Cada contador almacena sus propias duraciones y título bajo una clave única."
+        },
+        {
+          "title": "Diseño Responsivo",
+          "desc": "La interfaz se adapta a medida que se añaden más temporizadores. Los tamaños de fuente escalan según el ancho del contenedor para mantener la legibilidad con 4 temporizadores en pantalla."
+        },
+        {
+          "title": "Modelo de Pantalla Única",
+          "desc": "No se requiere navegación. Todos los controles son inmediatamente accesibles — diseñado para interacción rápida bajo presión."
+        }
       ]
     },
     "tech": {
@@ -148,10 +178,22 @@
       "label": "Decisiones de Diseño",
       "heading": "Por qué funciona así",
       "items": [
-        { "title": "Modelo por Fases", "desc": "Elegido para reflejar el flujo real de los torneos en lugar de una cuenta regresiva genérica." },
-        { "title": "Instancias de Temporizador Independientes", "desc": "Cada temporizador está aislado para evitar complejidad de estado compartido y garantizar fiabilidad." },
-        { "title": "Edición en Línea", "desc": "Elimina la fricción y permite ajustes rápidos durante las partidas en vivo." },
-        { "title": "Persistencia Local", "desc": "Evita requisitos de inicio de sesión mientras preserva las configuraciones del usuario entre sesiones." }
+        {
+          "title": "Modelo por Fases",
+          "desc": "Elegido para reflejar el flujo real de los torneos en lugar de una cuenta regresiva genérica."
+        },
+        {
+          "title": "Instancias de Temporizador Independientes",
+          "desc": "Cada temporizador está aislado para evitar complejidad de estado compartido y garantizar fiabilidad."
+        },
+        {
+          "title": "Edición en Línea",
+          "desc": "Elimina la fricción y permite ajustes rápidos durante las partidas en vivo."
+        },
+        {
+          "title": "Persistencia Local",
+          "desc": "Evita requisitos de inicio de sesión mientras preserva las configuraciones del usuario entre sesiones."
+        }
       ]
     },
     "challenges": {
@@ -187,6 +229,493 @@
       "label": "Reflexión",
       "body": "Este proyecto comenzó como una necesidad personal y evolucionó en un producto enfocado. Destaca la importancia de construir a partir de casos de uso reales, diseñar según el contexto y mantener las interfaces simples bajo presión.",
       "cta": "Ver proyecto en vivo →"
+    }
+  },
+  "services_page": {
+    "nav": {
+      "servicios": "Servicios",
+      "porQueWeb": "Por qué una web",
+      "proceso": "Proceso",
+      "trabajo": "Trabajo",
+      "sobreMi": "Sobre mí",
+      "contacto": "Contacto",
+      "cta": "Hablemos"
+    },
+    "hero": {
+      "badge": "Estudio Digital",
+      "titleLine1": "Páginas web que",
+      "titleLine2": "hacen crecer tu negocio.",
+      "description": "Diseño y desarrollo web para negocios que quieren una presencia profesional, clara y orientada a resultados.",
+      "ctaPrimary": "Cotiza tu página",
+      "ctaSecondary": "Ver proyectos",
+      "indicators": [
+        {
+          "title": "Rápido",
+          "desc": "y sin complicaciones",
+          "icon": "/services/svg/01-rapidez.svg"
+        },
+        {
+          "title": "Diseño profesional",
+          "desc": "a tu medida",
+          "icon": "/services/svg/02-diseno-profesional.svg"
+        },
+        {
+          "title": "Lista para crecer",
+          "desc": "sin límites",
+          "icon": "/services/svg/03-crecimiento.svg"
+        }
+      ],
+      "mockupAlt": "Vista previa del sitio Two Manos en escritorio y móvil"
+    },
+    "why": {
+      "eyebrow": "Tu sitio, Tu ventaja",
+      "heading1": "Las redes sociales ayudan a que te descubran.",
+      "heading2": "Tu página web ayuda a que te elijan.",
+      "description": "Una página web te da control, credibilidad y un lugar propio para mostrar lo mejor de tu negocio. Integra tu historia, testimonios y formas de contacto en una sola experiencia, optimizada para buscadores y preparada para convertir visitas en oportunidades.",
+      "benefits": [
+        {
+          "icon": "/services/svg/05-shield-check.svg",
+          "title": "Más credibilidad",
+          "desc": "Genera confianza y transmite profesionalismo."
+        },
+        {
+          "icon": "/services/svg/06-clock.svg",
+          "title": "Siempre disponible",
+          "desc": "Tu negocio activo 24/7."
+        },
+        {
+          "icon": "/services/svg/07-search.svg",
+          "title": "Te encuentran",
+          "desc": "Optimizado para buscadores y nuevas formas de descubrimiento."
+        },
+        {
+          "icon": "/services/svg/08-trending-up.svg",
+          "title": "Más oportunidades",
+          "desc": "Convierte visitas en clientes."
+        }
+      ]
+    },
+    "pricing": {
+      "eyebrow": "Servicios",
+      "heading": "Soluciones para cada etapa de tu negocio.",
+      "description": "Desde una página sencilla y efectiva hasta una solución más completa con medición y estrategia, todos nuestros sitios están diseñados para ser rápidos, accesibles y listos para crecer.",
+      "viewAll": "Ver todo lo incluido",
+      "viewLess": "Ocultar comparativa",
+      "detailsCta": "Ver detalles",
+      "cards": [
+        {
+          "icon": "/services/svg/09-presencia.svg",
+          "name": "Presencia",
+          "price": "$5,500",
+          "priceSuffix": "+ IVA",
+          "features": [
+            "Landing page de alto impacto",
+            "Diseño personalizado",
+            "Optimizado para buscadores",
+            "Formulario / WhatsApp",
+            "Entrega en 3-5 días"
+          ],
+          "description": "Una página profesional y efectiva para dar a conocer tu negocio.",
+          "highlighted": true
+        },
+        {
+          "icon": "/services/svg/10-negocio.svg",
+          "name": "Negocio",
+          "price": "$10,500",
+          "priceSuffix": "+ IVA",
+          "features": [
+            "4-6 páginas",
+            "SEO técnico básico",
+            "Google Analytics 4",
+            "Formulario / WhatsApp",
+            "Entrega en 1-2 semanas"
+          ],
+          "description": "Un sitio completo para presentar tu empresa y servicios.",
+          "highlighted": false
+        },
+        {
+          "icon": "/services/svg/11-crecimiento-plan.svg",
+          "name": "Crecimiento",
+          "price": "$19,500",
+          "priceSuffix": "+ IVA",
+          "features": [
+            "6-10 páginas",
+            "SEO y estructura semántica",
+            "GA4 + Tag Manager",
+            "Eventos y conversiones",
+            "Entrega en 2-3 semanas"
+          ],
+          "description": "Un sitio orientado a generar oportunidades.",
+          "highlighted": false
+        }
+      ],
+      "chips": [
+        {
+          "icon": "/services/svg/12-html-semantico.svg",
+          "label": "HTML semántico"
+        },
+        {
+          "icon": "/services/svg/13-rendimiento.svg",
+          "label": "Rendimiento"
+        },
+        {
+          "icon": "/services/svg/14-accesibilidad.svg",
+          "label": "Accesibilidad"
+        },
+        {
+          "icon": "/services/svg/15-indexabilidad.svg",
+          "label": "Indexabilidad"
+        }
+      ]
+    },
+    "comparison": {
+      "eyebrow": "Comparativa de servicios",
+      "heading": "Todo lo que incluye.",
+      "description": "Algunos elementos pueden variar según las necesidades del proyecto. Integraciones o funcionalidades adicionales se cotizan por separado.",
+      "columns": [
+        "Características",
+        "Presencia",
+        "Negocio",
+        "Crecimiento"
+      ],
+      "rows": [
+        {
+          "label": "Diseño visual personalizado",
+          "values": [
+            "check",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "Sitio responsive (mobile, tablet, desktop)",
+          "values": [
+            "check",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "HTML semántico y buenas prácticas",
+          "values": [
+            "check",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "Accesibilidad base",
+          "values": [
+            "check",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "Metadata y estructura SEO técnica",
+          "values": [
+            "check",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "Sitemap e indexabilidad",
+          "values": [
+            "check",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "Google Search Console",
+          "values": [
+            "dash",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "Datos estructurados (cuando aplica)",
+          "values": [
+            "Cuando aplica",
+            "Cuando aplica",
+            "Cuando aplica"
+          ]
+        },
+        {
+          "label": "Arquitectura de información",
+          "values": [
+            "Básica (1 página)",
+            "4-6 secciones",
+            "6-10 secciones"
+          ]
+        },
+        {
+          "label": "Google Analytics 4",
+          "values": [
+            "dash",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "Google Tag Manager",
+          "values": [
+            "dash",
+            "dash",
+            "Cuando se requiere"
+          ]
+        },
+        {
+          "label": "Eventos / conversiones personalizadas",
+          "values": [
+            "dash",
+            "Hasta 3",
+            "Hasta 5"
+          ]
+        },
+        {
+          "label": "Revisiones incluidas",
+          "values": [
+            "1 ronda",
+            "Hasta 2 rondas",
+            "Hasta 3 rondas"
+          ]
+        },
+        {
+          "label": "Tiempo de entrega estimado",
+          "values": [
+            "3-5 días",
+            "1-2 semanas",
+            "2-3 semanas"
+          ]
+        },
+        {
+          "label": "Dashboard básico de analítica",
+          "values": [
+            "dash",
+            "dash",
+            "check"
+          ]
+        },
+        {
+          "label": "Precio",
+          "values": [
+            "$5,500",
+            "$10,500",
+            "Desde $19,500"
+          ],
+          "highlight": true
+        }
+      ]
+    },
+    "semantic": {
+      "eyebrow": "Nuestra base",
+      "heading1": "Semantic Web",
+      "heading2": "Foundation.",
+      "description": "Todos nuestros sitios se construyen sobre una base sólida de buenas prácticas: código limpio, contenido estructurado, accesibilidad, rendimiento y metadatos.",
+      "sub": "Diseñados para ser entendidos por:",
+      "chips": [
+        {
+          "icon": "/services/svg/16-personas.svg",
+          "label": "Personas"
+        },
+        {
+          "icon": "/services/svg/17-buscadores.svg",
+          "label": "Buscadores"
+        },
+        {
+          "icon": "/services/svg/18-sistemas-ia.svg",
+          "label": "Sistemas de IA"
+        }
+      ],
+      "graphicAlt": "Pilares del sitio: diseño y UX, desarrollo, contenido estructurado, rendimiento, accesibilidad e indexabilidad"
+    },
+    "process": {
+      "eyebrow": "Proceso",
+      "heading": "De la idea al sitio, sin fricción.",
+      "description": "Un proceso claro y directo para que tengas tu sitio web listo en el menor tiempo posible, con calidad y sin desarrollos innecesarios.",
+      "steps": [
+        {
+          "number": "01",
+          "icon": "/services/svg/19-brief-objetivos.svg",
+          "title": "Brief y objetivos"
+        },
+        {
+          "number": "02",
+          "icon": "/services/svg/20-diseno-desarrollo.svg",
+          "title": "Diseño y desarrollo"
+        },
+        {
+          "number": "03",
+          "icon": "/services/svg/21-revision-ajustes.svg",
+          "title": "Revisión y ajustes"
+        },
+        {
+          "number": "04",
+          "icon": "/services/svg/22-publicacion-entrega.svg",
+          "title": "Publicación y entrega"
+        }
+      ]
+    },
+    "work": {
+      "eyebrow": "Trabajo",
+      "heading": "Proyectos recientes.",
+      "viewAll": "Ver todos los proyectos",
+      "items": [
+        {
+          "title": "Calculadora de persianas",
+          "subtitle": "Proyecto personal"
+        },
+        {
+          "title": "Design System",
+          "subtitle": "Proyecto personal"
+        },
+        {
+          "title": "Focus Rounds",
+          "subtitle": "Proyecto personal"
+        },
+        {
+          "title": "Two Manos",
+          "subtitle": "Proyecto personal"
+        }
+      ]
+    },
+    "about": {
+      "eyebrow": "Sobre mí",
+      "heading1": "Un perfil entre diseño",
+      "heading2": "y desarrollo.",
+      "body1": "Soy Braulio Romero, UX Engineer y Frontend Developer con más de 7 años de experiencia creando experiencias digitales para productos reales.",
+      "body2": "Me enfoco en diseño y desarrollo para construir interfaces claras, funcionales y listas para crecer, reduciendo la pérdida de información entre el diseño y el desarrollo.",
+      "cta": "Conoce más sobre mí",
+      "badges": [
+        {
+          "icon": "/services/logos/thomson-reuters-mark.svg",
+          "company": "Thomson Reuters",
+          "role": "Design Systems · Frontend",
+          "iconWidth": 135,
+          "iconHeight": 135
+        },
+        {
+          "icon": "/services/logos/home-depot.svg",
+          "company": "The Home Depot México",
+          "role": "UX/UI · Frontend",
+          "iconWidth": 227,
+          "iconHeight": 228
+        },
+        {
+          "icon": "/services/logos/reservamos-icon.png",
+          "company": "Reservamos",
+          "role": "Frontend · React / Next.js",
+          "iconWidth": 128,
+          "iconHeight": 128
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Preguntas frecuentes",
+      "heading": "Resolvemos tus dudas.",
+      "items": [
+        {
+          "q": "¿El dominio y hosting están incluidos?",
+          "a": "No, el dominio y el hosting se cotizan y contratan por separado. Te guío en la elección y configuración inicial."
+        },
+        {
+          "q": "¿Incluye SEO o campañas?",
+          "a": "Incluye SEO técnico: metadata, sitemap, HTML semántico e indexabilidad. No incluye campañas de pauta ni estrategia de contenido continuo."
+        },
+        {
+          "q": "¿Tengo que tener los textos y fotos?",
+          "a": "Ayuda tenerlos, pero no es obligatorio. Puedo apoyarte a estructurar el contenido inicial; fotografía profesional se cotiza aparte."
+        },
+        {
+          "q": "¿Pueden hacer tiendas en línea?",
+          "a": "Por el momento nos enfocamos en sitios informativos y de conversión. Para e-commerce completo, se cotiza como proyecto especial."
+        },
+        {
+          "q": "¿Puedo solicitar cambios al terminar?",
+          "a": "Sí, cada plan incluye un número definido de rondas de revisión antes de la entrega. Cambios adicionales se cotizan por separado."
+        },
+        {
+          "q": "¿Qué pasa si necesito algo adicional?",
+          "a": "Cualquier funcionalidad fuera del alcance del plan —integraciones, secciones extra, tienda en línea— se cotiza como adicional antes de iniciar."
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contacto",
+      "heading": "Hablemos de tu proyecto.",
+      "description": "Tu negocio ya existe. Hagamos que su presencia digital esté a la altura.",
+      "ctaPrimary": "Enviar mensaje",
+      "ctaSecondary": "Ver mi trabajo",
+      "cards": [
+        {
+          "icon": "/services/svg/27-respuesta-rapida.svg",
+          "label": "Respuesta rápida"
+        },
+        {
+          "icon": "/services/svg/28-disponible.svg",
+          "label": "Disponible para nuevos proyectos"
+        },
+        {
+          "icon": "/services/svg/29-ubicacion.svg",
+          "label": "Monterrey, NL"
+        }
+      ]
+    },
+    "footer": {
+      "name": "Braulio Romero",
+      "links": [
+        {
+          "label": "Servicios",
+          "href": "#servicios"
+        },
+        {
+          "label": "Proceso",
+          "href": "#proceso"
+        },
+        {
+          "label": "Trabajo",
+          "href": "#trabajo"
+        },
+        {
+          "label": "Sobre mí",
+          "href": "#sobre-mi"
+        }
+      ],
+      "socials": [
+        {
+          "icon": "/services/svg/30-github.svg",
+          "label": "GitHub",
+          "href": "https://github.com/TruenoElfico"
+        },
+        {
+          "icon": "/services/svg/31-linkedin.svg",
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/in/braulio-romero/"
+        },
+        {
+          "icon": "/services/svg/32-dribbble.svg",
+          "label": "Dribbble",
+          "href": "https://dribbble.com/TruenoElfico"
+        }
+      ],
+      "siteLink": {
+        "label": "truenoelfico.com",
+        "href": "https://truenoelfico.com"
+      }
+    },
+    "a11y": {
+      "skipToContent": "Saltar al contenido",
+      "navLabel": "Principal",
+      "langToggle": "cambiar idioma a inglés",
+      "themeDark": "Oscuro",
+      "themeLight": "Claro",
+      "themeToggle": "cambiar tema de color",
+      "nextSection": "Ir a la siguiente sección",
+      "included": "Incluido",
+      "notIncluded": "No incluido"
     }
   }
 }

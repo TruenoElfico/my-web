@@ -93,10 +93,22 @@
     "hero_span": "Phase-based timer for TCG tournaments",
     "hero_description": "A multi-timer web application built for Trading Card Game tournaments and structured time workflows. Run up to four independent timers simultaneously, each with its own phase sequence, configuration, and persistent state.",
     "phases": [
-      { "name": "Setup", "desc": "Preparation before the round" },
-      { "name": "Main", "desc": "Primary round duration" },
-      { "name": "Extra", "desc": "Overtime phase" },
-      { "name": "Idle", "desc": "Timer at rest" }
+      {
+        "name": "Setup",
+        "desc": "Preparation before the round"
+      },
+      {
+        "name": "Main",
+        "desc": "Primary round duration"
+      },
+      {
+        "name": "Extra",
+        "desc": "Overtime phase"
+      },
+      {
+        "name": "Idle",
+        "desc": "Timer at rest"
+      }
     ],
     "problem": {
       "label": "The Problem",
@@ -117,12 +129,30 @@
       "label": "Key Features",
       "heading": "Everything needed for live timing",
       "items": [
-        { "title": "Multi-Timer System", "desc": "Up to 4 fully independent timers running simultaneously. Dynamic layout splits the screen automatically as timers are added." },
-        { "title": "Phase-Based Flow", "desc": "Each timer follows Setup → Main → Extra → Idle. Phases transition automatically on completion, mirroring real tournament flow." },
-        { "title": "Inline Editing", "desc": "Click to edit the timer name or adjust hours, minutes, and seconds directly — no modal interruptions during live use." },
-        { "title": "Persistent State", "desc": "Configuration survives page reloads via localStorage. Each counter stores its own durations and title under a unique key." },
-        { "title": "Responsive Layout", "desc": "UI adapts as more timers are added. Font sizes scale with container width to keep readability with 4 timers on screen." },
-        { "title": "Single-Screen Model", "desc": "No navigation required. All controls are immediately accessible — designed for fast interaction under pressure." }
+        {
+          "title": "Multi-Timer System",
+          "desc": "Up to 4 fully independent timers running simultaneously. Dynamic layout splits the screen automatically as timers are added."
+        },
+        {
+          "title": "Phase-Based Flow",
+          "desc": "Each timer follows Setup → Main → Extra → Idle. Phases transition automatically on completion, mirroring real tournament flow."
+        },
+        {
+          "title": "Inline Editing",
+          "desc": "Click to edit the timer name or adjust hours, minutes, and seconds directly — no modal interruptions during live use."
+        },
+        {
+          "title": "Persistent State",
+          "desc": "Configuration survives page reloads via localStorage. Each counter stores its own durations and title under a unique key."
+        },
+        {
+          "title": "Responsive Layout",
+          "desc": "UI adapts as more timers are added. Font sizes scale with container width to keep readability with 4 timers on screen."
+        },
+        {
+          "title": "Single-Screen Model",
+          "desc": "No navigation required. All controls are immediately accessible — designed for fast interaction under pressure."
+        }
       ]
     },
     "tech": {
@@ -148,10 +178,22 @@
       "label": "Design Decisions",
       "heading": "Why it works this way",
       "items": [
-        { "title": "Phase-Based Model", "desc": "Chosen to reflect real-world tournament flow rather than a generic countdown." },
-        { "title": "Independent Timer Instances", "desc": "Each timer is isolated to avoid shared state complexity and ensure reliability." },
-        { "title": "Inline Editing", "desc": "Removes friction and allows quick adjustments during live matches." },
-        { "title": "Local Persistence", "desc": "Avoids login requirements while preserving user configurations between sessions." }
+        {
+          "title": "Phase-Based Model",
+          "desc": "Chosen to reflect real-world tournament flow rather than a generic countdown."
+        },
+        {
+          "title": "Independent Timer Instances",
+          "desc": "Each timer is isolated to avoid shared state complexity and ensure reliability."
+        },
+        {
+          "title": "Inline Editing",
+          "desc": "Removes friction and allows quick adjustments during live matches."
+        },
+        {
+          "title": "Local Persistence",
+          "desc": "Avoids login requirements while preserving user configurations between sessions."
+        }
       ]
     },
     "challenges": {
@@ -187,6 +229,493 @@
       "label": "Reflection",
       "body": "This project started as a personal need and evolved into a focused product. It highlights the importance of building from real use cases, designing for context, and keeping interfaces simple under pressure.",
       "cta": "View live project →"
+    }
+  },
+  "services_page": {
+    "nav": {
+      "servicios": "Services",
+      "porQueWeb": "Why a website",
+      "proceso": "Process",
+      "trabajo": "Work",
+      "sobreMi": "About me",
+      "contacto": "Contact",
+      "cta": "Let's talk"
+    },
+    "hero": {
+      "badge": "Digital Studio",
+      "titleLine1": "Websites that",
+      "titleLine2": "help your business grow.",
+      "description": "Web design and development for businesses that want a professional, clear, results-driven presence.",
+      "ctaPrimary": "Get a quote",
+      "ctaSecondary": "See projects",
+      "indicators": [
+        {
+          "title": "Fast",
+          "desc": "no complications",
+          "icon": "/services/svg/01-rapidez.svg"
+        },
+        {
+          "title": "Professional design",
+          "desc": "tailored to you",
+          "icon": "/services/svg/02-diseno-profesional.svg"
+        },
+        {
+          "title": "Ready to grow",
+          "desc": "no limits",
+          "icon": "/services/svg/03-crecimiento.svg"
+        }
+      ],
+      "mockupAlt": "Preview of the Two Manos site on desktop and mobile"
+    },
+    "why": {
+      "eyebrow": "Your site, your edge",
+      "heading1": "Social media helps people discover you.",
+      "heading2": "Your website helps them choose you.",
+      "description": "A website gives you control, credibility, and a home of your own to show the best of your business. It brings your story, testimonials, and ways to get in touch into a single experience — optimized for search engines and built to turn visits into opportunities.",
+      "benefits": [
+        {
+          "icon": "/services/svg/05-shield-check.svg",
+          "title": "More credibility",
+          "desc": "Builds trust and conveys professionalism."
+        },
+        {
+          "icon": "/services/svg/06-clock.svg",
+          "title": "Always available",
+          "desc": "Your business, live 24/7."
+        },
+        {
+          "icon": "/services/svg/07-search.svg",
+          "title": "Easy to find",
+          "desc": "Optimized for search engines and new ways of being discovered."
+        },
+        {
+          "icon": "/services/svg/08-trending-up.svg",
+          "title": "More opportunities",
+          "desc": "Turns visits into customers."
+        }
+      ]
+    },
+    "pricing": {
+      "eyebrow": "Services",
+      "heading": "Solutions for every stage of your business.",
+      "description": "From a simple, effective page to a more complete solution with measurement and strategy, every site we build is fast, accessible, and ready to grow.",
+      "viewAll": "See everything included",
+      "viewLess": "Hide comparison",
+      "detailsCta": "See details",
+      "cards": [
+        {
+          "icon": "/services/svg/09-presencia.svg",
+          "name": "Presence",
+          "price": "$5,500",
+          "priceSuffix": "+ VAT",
+          "features": [
+            "High-impact landing page",
+            "Custom design",
+            "Optimized for search engines",
+            "Form / WhatsApp",
+            "3-5 day delivery"
+          ],
+          "description": "A professional, effective page to introduce your business.",
+          "highlighted": true
+        },
+        {
+          "icon": "/services/svg/10-negocio.svg",
+          "name": "Business",
+          "price": "$10,500",
+          "priceSuffix": "+ VAT",
+          "features": [
+            "4-6 pages",
+            "Basic technical SEO",
+            "Google Analytics 4",
+            "Form / WhatsApp",
+            "1-2 week delivery"
+          ],
+          "description": "A complete site to showcase your company and services.",
+          "highlighted": false
+        },
+        {
+          "icon": "/services/svg/11-crecimiento-plan.svg",
+          "name": "Growth",
+          "price": "$19,500",
+          "priceSuffix": "+ VAT",
+          "features": [
+            "6-10 pages",
+            "SEO and semantic structure",
+            "GA4 + Tag Manager",
+            "Events and conversions",
+            "2-3 week delivery"
+          ],
+          "description": "A site built to generate opportunities.",
+          "highlighted": false
+        }
+      ],
+      "chips": [
+        {
+          "icon": "/services/svg/12-html-semantico.svg",
+          "label": "Semantic HTML"
+        },
+        {
+          "icon": "/services/svg/13-rendimiento.svg",
+          "label": "Performance"
+        },
+        {
+          "icon": "/services/svg/14-accesibilidad.svg",
+          "label": "Accessibility"
+        },
+        {
+          "icon": "/services/svg/15-indexabilidad.svg",
+          "label": "Indexability"
+        }
+      ]
+    },
+    "comparison": {
+      "eyebrow": "Service comparison",
+      "heading": "Everything that's included.",
+      "description": "Some elements may vary depending on the project's needs. Additional integrations or features are quoted separately.",
+      "columns": [
+        "Features",
+        "Presence",
+        "Business",
+        "Growth"
+      ],
+      "rows": [
+        {
+          "label": "Custom visual design",
+          "values": [
+            "check",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "Responsive site (mobile, tablet, desktop)",
+          "values": [
+            "check",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "Semantic HTML and best practices",
+          "values": [
+            "check",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "Baseline accessibility",
+          "values": [
+            "check",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "Metadata and technical SEO structure",
+          "values": [
+            "check",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "Sitemap and indexability",
+          "values": [
+            "check",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "Google Search Console",
+          "values": [
+            "dash",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "Structured data (where applicable)",
+          "values": [
+            "Where applicable",
+            "Where applicable",
+            "Where applicable"
+          ]
+        },
+        {
+          "label": "Information architecture",
+          "values": [
+            "Basic (1 page)",
+            "4-6 sections",
+            "6-10 sections"
+          ]
+        },
+        {
+          "label": "Google Analytics 4",
+          "values": [
+            "dash",
+            "check",
+            "check"
+          ]
+        },
+        {
+          "label": "Google Tag Manager",
+          "values": [
+            "dash",
+            "dash",
+            "When required"
+          ]
+        },
+        {
+          "label": "Custom events / conversions",
+          "values": [
+            "dash",
+            "Up to 3",
+            "Up to 5"
+          ]
+        },
+        {
+          "label": "Revision rounds included",
+          "values": [
+            "1 round",
+            "Up to 2 rounds",
+            "Up to 3 rounds"
+          ]
+        },
+        {
+          "label": "Estimated delivery time",
+          "values": [
+            "3-5 days",
+            "1-2 weeks",
+            "2-3 weeks"
+          ]
+        },
+        {
+          "label": "Basic analytics dashboard",
+          "values": [
+            "dash",
+            "dash",
+            "check"
+          ]
+        },
+        {
+          "label": "Price",
+          "values": [
+            "$5,500",
+            "$10,500",
+            "From $19,500"
+          ],
+          "highlight": true
+        }
+      ]
+    },
+    "semantic": {
+      "eyebrow": "Our foundation",
+      "heading1": "Semantic Web",
+      "heading2": "Foundation.",
+      "description": "Every site we build sits on a solid foundation of good practices: clean code, structured content, accessibility, performance, and metadata.",
+      "sub": "Built to be understood by:",
+      "chips": [
+        {
+          "icon": "/services/svg/16-personas.svg",
+          "label": "People"
+        },
+        {
+          "icon": "/services/svg/17-buscadores.svg",
+          "label": "Search engines"
+        },
+        {
+          "icon": "/services/svg/18-sistemas-ia.svg",
+          "label": "AI systems"
+        }
+      ],
+      "graphicAlt": "Site pillars: design and UX, development, structured content, performance, accessibility, and indexability"
+    },
+    "process": {
+      "eyebrow": "Process",
+      "heading": "From idea to live site, with no friction.",
+      "description": "A clear, direct process to get your site live as quickly as possible, with quality and no unnecessary work.",
+      "steps": [
+        {
+          "number": "01",
+          "icon": "/services/svg/19-brief-objetivos.svg",
+          "title": "Brief and goals"
+        },
+        {
+          "number": "02",
+          "icon": "/services/svg/20-diseno-desarrollo.svg",
+          "title": "Design and development"
+        },
+        {
+          "number": "03",
+          "icon": "/services/svg/21-revision-ajustes.svg",
+          "title": "Review and adjustments"
+        },
+        {
+          "number": "04",
+          "icon": "/services/svg/22-publicacion-entrega.svg",
+          "title": "Launch and delivery"
+        }
+      ]
+    },
+    "work": {
+      "eyebrow": "Work",
+      "heading": "Recent projects.",
+      "viewAll": "See all projects",
+      "items": [
+        {
+          "title": "Blinds calculator",
+          "subtitle": "Personal project"
+        },
+        {
+          "title": "Design System",
+          "subtitle": "Personal project"
+        },
+        {
+          "title": "Focus Rounds",
+          "subtitle": "Personal project"
+        },
+        {
+          "title": "Two Manos",
+          "subtitle": "Personal project"
+        }
+      ]
+    },
+    "about": {
+      "eyebrow": "About me",
+      "heading1": "A profile between design",
+      "heading2": "and development.",
+      "body1": "I'm Braulio Romero, a UX Engineer and Frontend Developer with 7+ years of experience building digital experiences for real products.",
+      "body2": "I focus on design and development together to build interfaces that are clear, functional, and ready to grow — reducing the information loss between design and development.",
+      "cta": "More about me",
+      "badges": [
+        {
+          "icon": "/services/logos/thomson-reuters-mark.svg",
+          "company": "Thomson Reuters",
+          "role": "Design Systems · Frontend",
+          "iconWidth": 135,
+          "iconHeight": 135
+        },
+        {
+          "icon": "/services/logos/home-depot.svg",
+          "company": "The Home Depot México",
+          "role": "UX/UI · Frontend",
+          "iconWidth": 227,
+          "iconHeight": 228
+        },
+        {
+          "icon": "/services/logos/reservamos-icon.png",
+          "company": "Reservamos",
+          "role": "Frontend · React / Next.js",
+          "iconWidth": 128,
+          "iconHeight": 128
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "heading": "Answering your questions.",
+      "items": [
+        {
+          "q": "Are domain and hosting included?",
+          "a": "No, domain and hosting are quoted and purchased separately. I'll guide you through choosing and setting them up."
+        },
+        {
+          "q": "Does it include SEO or ad campaigns?",
+          "a": "It includes technical SEO: metadata, sitemap, semantic HTML, and indexability. It does not include paid ad campaigns or ongoing content strategy."
+        },
+        {
+          "q": "Do I need to have the copy and photos ready?",
+          "a": "It helps, but it's not required. I can help structure the initial content; professional photography is quoted separately."
+        },
+        {
+          "q": "Can you build online stores?",
+          "a": "Right now we focus on informational and conversion-focused sites. Full e-commerce is quoted as a special project."
+        },
+        {
+          "q": "Can I request changes once it's done?",
+          "a": "Yes, every plan includes a set number of revision rounds before delivery. Additional changes afterward are quoted separately."
+        },
+        {
+          "q": "What if I need something extra?",
+          "a": "Anything outside the plan's scope — integrations, extra sections, an online store — is quoted as an add-on before we start."
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "heading": "Let's talk about your project.",
+      "description": "Your business already exists. Let's make its digital presence match.",
+      "ctaPrimary": "Send a message",
+      "ctaSecondary": "See my work",
+      "cards": [
+        {
+          "icon": "/services/svg/27-respuesta-rapida.svg",
+          "label": "Quick response"
+        },
+        {
+          "icon": "/services/svg/28-disponible.svg",
+          "label": "Available for new projects"
+        },
+        {
+          "icon": "/services/svg/29-ubicacion.svg",
+          "label": "Monterrey, NL"
+        }
+      ]
+    },
+    "footer": {
+      "name": "Braulio Romero",
+      "links": [
+        {
+          "label": "Services",
+          "href": "#servicios"
+        },
+        {
+          "label": "Process",
+          "href": "#proceso"
+        },
+        {
+          "label": "Work",
+          "href": "#trabajo"
+        },
+        {
+          "label": "About me",
+          "href": "#sobre-mi"
+        }
+      ],
+      "socials": [
+        {
+          "icon": "/services/svg/30-github.svg",
+          "label": "GitHub",
+          "href": "https://github.com/TruenoElfico"
+        },
+        {
+          "icon": "/services/svg/31-linkedin.svg",
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/in/braulio-romero/"
+        },
+        {
+          "icon": "/services/svg/32-dribbble.svg",
+          "label": "Dribbble",
+          "href": "https://dribbble.com/TruenoElfico"
+        }
+      ],
+      "siteLink": {
+        "label": "truenoelfico.com",
+        "href": "https://truenoelfico.com"
+      }
+    },
+    "a11y": {
+      "skipToContent": "Skip to content",
+      "navLabel": "Main",
+      "langToggle": "switch language to Spanish",
+      "themeDark": "Dark",
+      "themeLight": "Light",
+      "themeToggle": "change color theme",
+      "nextSection": "Go to next section",
+      "included": "Included",
+      "notIncluded": "Not included"
     }
   }
 }

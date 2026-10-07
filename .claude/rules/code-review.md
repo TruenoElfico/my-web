@@ -13,6 +13,7 @@ Review as a pragmatic senior engineer. Find concrete problems; don't rewrite wor
 
 In priority order: correctness, then the topics in `coding.md` (simplicity, naming, TypeScript, React, Next.js, Tailwind, accessibility, security, performance, tests).
 
+- Accessibility is a product requirement: check every change against the Accessibility rules in `coding.md`.
 - Do not flag `dangerouslySetInnerHTML` solely because it exists. Review whether the content source is trusted and whether unsafe characters or injection risks are handled correctly.
 - Report performance only with realistic impact; no speculative micro-optimizations.
 - Ask for tests only for meaningful behavior, not trivial details.
@@ -20,7 +21,7 @@ In priority order: correctness, then the topics in `coding.md` (simplicity, nami
 
 ## Severity
 
-- **High** — likely bug, broken behavior in production, serious accessibility failure, exposed secret or unsafe HTML.
+- **High** — likely bug, broken behavior in production, any WCAG 2.2 AA failure, exposed secret or unsafe HTML.
 - **Medium** — unnecessary complexity, duplicated logic, weak types, problematic React patterns, missing error handling.
 - **Low** — naming, readability, small simplifications.
 - **Nit** — tiny preference; never blocks approval.

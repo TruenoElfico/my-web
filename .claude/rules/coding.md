@@ -72,11 +72,20 @@ const canShowComparison = showComparison && rows.length > 0;
 
 Before creating a component, check whether an existing one (or a reasonable variant) solves it. Prefer variants over near-duplicates, but don't add variants for one-off differences. Cover relevant states: hover, focus, active, disabled.
 
-## Accessibility
+## Accessibility (required)
 
-- Semantic HTML first: `<button>` for actions, `<a>`/`<Link>` for navigation, proper heading order, `<label>` for inputs. No clickable `<div>`s.
-- Keyboard support, visible focus, useful alt text, sufficient contrast, focus management in dialogs.
-- Use ARIA only when native semantics are insufficient.
+Accessibility is a feature we sell: every site must meet **WCAG 2.2 AA**. Treat a failure as a bug, not a polish item.
+
+- Semantic HTML first: `<button>` for actions, `<a>`/`<Link>` for navigation, `<label>` for inputs. No clickable `<div>`s. Use ARIA only when native semantics are insufficient.
+- Landmarks: one `<main>`; header, nav, and footer outside it. Add a skip link when there's a fixed or long nav.
+- One heading per title (use a `<span>` for styled second lines), in logical order.
+- Keyboard: everything works without a mouse; focus is always visible and never hidden under fixed headers.
+- Contrast: 4.5:1 for text, 3:1 for large text, icons that carry meaning, and focus rings.
+- Icons that carry meaning need text (`sr-only` or `aria-label`); decorative images use `alt=""` and decorative SVGs `aria-hidden="true"`.
+- Accessible names include the visible text, so voice control works.
+- Keep `<html lang>` matching the displayed language; translate accessible text (labels, `aria-label`, `sr-only`) like any other copy.
+- Respect `prefers-reduced-motion`.
+- Cover pages with an automated `jest-axe` check; it can't measure contrast, so verify that manually.
 
 ## Security
 

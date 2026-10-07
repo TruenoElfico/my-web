@@ -59,21 +59,12 @@ export const metadata: Metadata = {
     title: "Braulio Romero — UX Engineer y Desarrollador Frontend",
     description:
       "UX Engineer especializado en sistemas de diseño, arquitectura frontend y experiencias web que convierten.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Braulio Romero — UX Engineer y Desarrollador Frontend",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Braulio Romero — UX Engineer y Desarrollador Frontend",
     description:
       "UX Engineer especializado en sistemas de diseño, arquitectura frontend y experiencias web que convierten.",
-    images: ["/og-image.png"],
     creator: "@braulioromero",
   },
 };

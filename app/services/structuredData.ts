@@ -31,7 +31,7 @@ export function buildServicesJsonLd() {
         name: "Braulio Romero — Desarrollo web y software",
         description: t.hero.description,
         url: PAGE_URL,
-        image: `${BASE_URL}/services/hero-two-manos.png`,
+        image: `${PAGE_URL}/opengraph-image`,
         email: "terrbete@gmail.com",
         founder: { "@id": PERSON_ID },
         address: {

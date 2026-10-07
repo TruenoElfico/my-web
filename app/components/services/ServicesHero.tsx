@@ -118,7 +118,7 @@ export default function ServicesHero({ hero, a11y, theme, isDark }: Props) {
                 width={1440}
                 height={920}
                 className="h-auto w-full"
-                priority
+                sizes="(min-width: 1024px) 58vw, 0px"
               />
             </motion.div>
           </motion.div>

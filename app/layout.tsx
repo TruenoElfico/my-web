@@ -10,7 +10,7 @@ const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const BASE_URL = "https://truenoelfico.com";
+const BASE_URL = "https://braulioromero.dev";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

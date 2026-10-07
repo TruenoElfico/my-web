@@ -11,7 +11,7 @@ export default function Image() {
     titleLine1: es.hero.name,
     titleLine2: es.hero.tagline,
     description: "Diseño y construyo sitios y productos web rápidos, claros y accesibles.",
-    footer: "truenoelfico.com",
+    footer: "braulioromero.dev",
     titleSize: 56,
   });
 }

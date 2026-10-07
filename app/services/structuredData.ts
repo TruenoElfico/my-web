@@ -5,7 +5,7 @@ import es from "../locales/es.json";
 // breadcrumb. Built from es.json (the default language) so it stays in sync
 // with what the page actually shows.
 
-const BASE_URL = "https://truenoelfico.com";
+const BASE_URL = "https://braulioromero.dev";
 const PAGE_URL = `${BASE_URL}/services`;
 
 // Matches the @id on the Person in app/layout.tsx so the graphs link up.

@@ -1,9 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import ServicesPageClient from "../../../services/ServicesPageClient";
-import en from "../../../locales/en.json";
+import es from "../../../locales/es.json";
 
-const t = en.services_page;
+// Spanish is the default language.
+const t = es.services_page;
 
 describe("ServicesPageClient", () => {
   it("renders every pricing card from the locale file", () => {

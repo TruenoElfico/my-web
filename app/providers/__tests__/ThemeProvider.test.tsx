@@ -22,18 +22,18 @@ const renderProvider = () =>
 describe("ThemeProvider", () => {
   beforeEach(() => localStorage.clear());
 
-  it("defaults to light and English", () => {
+  it("defaults to light and Spanish", () => {
     renderProvider();
     expect(screen.getByRole("button", { name: "light" })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "en" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "es" })).toBeInTheDocument();
   });
 
   it("restores stored preferences", () => {
     localStorage.setItem("theme-dark", "true");
-    localStorage.setItem("theme-lang", "es");
+    localStorage.setItem("theme-lang", "en");
     renderProvider();
     expect(screen.getByRole("button", { name: "dark" })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "es" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "en" })).toBeInTheDocument();
   });
 
   it("toggles and persists both settings", async () => {
@@ -41,11 +41,11 @@ describe("ThemeProvider", () => {
     renderProvider();
 
     await user.click(screen.getByRole("button", { name: "light" }));
-    await user.click(screen.getByRole("button", { name: "en" }));
+    await user.click(screen.getByRole("button", { name: "es" }));
 
     expect(screen.getByRole("button", { name: "dark" })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "es" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "en" })).toBeInTheDocument();
     expect(localStorage.getItem("theme-dark")).toBe("true");
-    expect(localStorage.getItem("theme-lang")).toBe("es");
+    expect(localStorage.getItem("theme-lang")).toBe("en");
   });
 });

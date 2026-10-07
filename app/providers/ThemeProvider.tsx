@@ -14,7 +14,7 @@ interface ThemeCtx {
 const ThemeContext = createContext<ThemeCtx>({
   isDark: false,
   toggleTheme: () => {},
-  lang: "en",
+  lang: "es",
   toggleLang: () => {},
 });
 
@@ -38,11 +38,12 @@ function notify() {
 }
 
 const readDark = () => localStorage.getItem("theme-dark") === "true";
-const readLang = (): Lang => (localStorage.getItem("theme-lang") === "es" ? "es" : "en");
+// Spanish is the default; only an explicit "en" choice switches to English.
+const readLang = (): Lang => (localStorage.getItem("theme-lang") === "en" ? "en" : "es");
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const isDark = useSyncExternalStore(subscribe, readDark, () => false);
-  const lang = useSyncExternalStore(subscribe, readLang, (): Lang => "en");
+  const lang = useSyncExternalStore(subscribe, readLang, (): Lang => "es");
 
   const toggleTheme = () => {
     localStorage.setItem("theme-dark", String(!readDark()));
@@ -50,7 +51,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   };
 
   const toggleLang = () => {
-    localStorage.setItem("theme-lang", readLang() === "en" ? "es" : "en");
+    localStorage.setItem("theme-lang", readLang() === "es" ? "en" : "es");
     notify();
   };
 

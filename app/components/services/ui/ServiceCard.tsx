@@ -36,7 +36,7 @@ export default function ServiceCard({
       <ul className="mt-5 space-y-2.5">
         {features.map((feature) => (
           <li key={feature} className={`flex items-start gap-2 text-sm leading-6 ${theme.body}`}>
-            <svg viewBox="0 0 20 20" width="16" height="16" className={`mt-1 shrink-0 ${theme.checkIcon}`} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg viewBox="0 0 20 20" width="16" height="16" className={`mt-1 shrink-0 ${theme.checkIcon}`} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="m4 10 4 4 8-8" />
             </svg>
             {feature}

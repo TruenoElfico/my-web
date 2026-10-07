@@ -9,14 +9,16 @@ import Container from "./ui/Container";
 import { easeOut, StaggerGroup, StaggerItem } from "./motion";
 
 type HeroT = typeof en.services_page.hero;
+type A11yT = typeof en.services_page.a11y;
 
 interface Props {
   hero: HeroT;
+  a11y: A11yT;
   theme: ServicesTheme;
   isDark: boolean;
 }
 
-export default function ServicesHero({ hero, theme, isDark }: Props) {
+export default function ServicesHero({ hero, a11y, theme, isDark }: Props) {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
   // Very light parallax: background drifts a few percent, well inside the
@@ -125,7 +127,7 @@ export default function ServicesHero({ hero, theme, isDark }: Props) {
 
       <motion.a
         href="#por-que-una-web"
-        aria-label="Ir a la siguiente sección"
+        aria-label={a11y.nextSection}
         className={`relative z-10 mx-auto mb-8 hidden h-8 w-8 items-center justify-center rounded-full transition md:flex ${theme.iconCircle}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

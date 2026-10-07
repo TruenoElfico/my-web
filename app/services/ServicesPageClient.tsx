@@ -44,12 +44,19 @@ export default function ServicesPageClient() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main
+      <div
         className={`min-h-screen overflow-x-hidden transition-colors duration-300 ${theme.pageBg}`}
         style={{ "--services-nav-h": "72px" } as React.CSSProperties}
       >
+        <a
+          href="#contenido"
+          className="sr-only rounded-xl bg-[#69E8FF] px-5 py-3 text-sm font-medium text-[#0B1220] focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60]"
+        >
+          {t.a11y.skipToContent}
+        </a>
         <ServicesNav
           nav={t.nav}
+          a11y={t.a11y}
           links={navLinks}
           theme={theme}
           isDark={isDark}
@@ -57,37 +64,40 @@ export default function ServicesPageClient() {
           lang={lang}
           onToggleLang={toggleLang}
         />
-        <ServicesHero hero={t.hero} theme={theme} isDark={isDark} />
-        <WhyWebsite why={t.why} theme={theme} />
-        <hr className={`border-t ${theme.divider}`} />
-        <PricingSection
-          pricing={t.pricing}
-          theme={theme}
-          showComparison={showComparison}
-          onToggleComparison={() => setShowComparison((prev) => !prev)}
-        />
-        <AnimatePresence initial={false}>
-          {showComparison && (
-            <motion.div
-              key="comparison"
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.5, ease: easeOut }}
-              className="overflow-hidden"
-            >
-              <ComparisonSection comparison={t.comparison} theme={theme} />
-            </motion.div>
-          )}
-        </AnimatePresence>
-        <SemanticFoundationSection semantic={t.semantic} />
-        <ProcessSection process={t.process} theme={theme} />
-        {SHOW_WORK && <WorkSection work={t.work} theme={theme} />}
-        <AboutSection about={t.about} />
-        <FAQSection faq={t.faq} theme={theme} />
-        <ContactSection contact={t.contact} theme={theme} />
+        {/* tabIndex lets the skip link move keyboard focus here, not just scroll. */}
+        <main id="contenido" tabIndex={-1} className="outline-none">
+          <ServicesHero hero={t.hero} a11y={t.a11y} theme={theme} isDark={isDark} />
+          <WhyWebsite why={t.why} theme={theme} />
+          <hr className={`border-t ${theme.divider}`} />
+          <PricingSection
+            pricing={t.pricing}
+            theme={theme}
+            showComparison={showComparison}
+            onToggleComparison={() => setShowComparison((prev) => !prev)}
+          />
+          <AnimatePresence initial={false}>
+            {showComparison && (
+              <motion.div
+                key="comparison"
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.5, ease: easeOut }}
+                className="overflow-hidden"
+              >
+                <ComparisonSection comparison={t.comparison} a11y={t.a11y} theme={theme} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <SemanticFoundationSection semantic={t.semantic} />
+          <ProcessSection process={t.process} theme={theme} />
+          {SHOW_WORK && <WorkSection work={t.work} theme={theme} />}
+          <AboutSection about={t.about} />
+          <FAQSection faq={t.faq} theme={theme} />
+          <ContactSection contact={t.contact} theme={theme} />
+        </main>
         <ServicesFooter footer={t.footer} theme={theme} />
-      </main>
+      </div>
     </MotionConfig>
   );
 }

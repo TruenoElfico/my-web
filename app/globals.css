@@ -17,3 +17,17 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, sans-serif;
 }
+
+/* Visible keyboard focus everywhere. cyan-600 keeps ≥3:1 contrast on both the
+   light and dark themes; the offset keeps the ring off cyan buttons. */
+:focus-visible {
+  outline: 2px solid #0891b2;
+  outline-offset: 2px;
+}
+
+/* Pages with a fixed header: keep anchor targets and keyboard-focused elements
+   from scrolling underneath it (WCAG 2.4.11 Focus Not Obscured).
+   72px matches --services-nav-h in ServicesPageClient. */
+html:has([data-fixed-nav]) {
+  scroll-padding-top: calc(72px + 1rem);
+}

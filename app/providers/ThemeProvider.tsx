@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useSyncExternalStore } from "react";
+import { createContext, useContext, useEffect, useSyncExternalStore } from "react";
 
 type Lang = "en" | "es";
 
@@ -44,6 +44,12 @@ const readLang = (): Lang => (localStorage.getItem("theme-lang") === "en" ? "en"
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const isDark = useSyncExternalStore(subscribe, readDark, () => false);
   const lang = useSyncExternalStore(subscribe, readLang, (): Lang => "es");
+
+  // Keep <html lang> in sync with the toggle so screen readers pronounce the
+  // page in the language it's actually shown in (WCAG 3.1.1).
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   const toggleTheme = () => {
     localStorage.setItem("theme-dark", String(!readDark()));

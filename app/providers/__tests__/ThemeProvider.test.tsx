@@ -48,4 +48,13 @@ describe("ThemeProvider", () => {
     expect(localStorage.getItem("theme-dark")).toBe("true");
     expect(localStorage.getItem("theme-lang")).toBe("en");
   });
+
+  it("keeps <html lang> in sync with the selected language", async () => {
+    const user = userEvent.setup();
+    renderProvider();
+    expect(document.documentElement.lang).toBe("es");
+
+    await user.click(screen.getByRole("button", { name: "es" }));
+    expect(document.documentElement.lang).toBe("en");
+  });
 });

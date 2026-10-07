@@ -4,13 +4,15 @@ import ComparisonTable from "./ui/ComparisonTable";
 import Container from "./ui/Container";
 
 type ComparisonT = typeof en.services_page.comparison;
+type A11yT = typeof en.services_page.a11y;
 
 interface Props {
   comparison: ComparisonT;
+  a11y: A11yT;
   theme: ServicesTheme;
 }
 
-export default function ComparisonSection({ comparison, theme }: Props) {
+export default function ComparisonSection({ comparison, a11y, theme }: Props) {
   return (
     <Container as="section" id="comparativa" className="pb-16 lg:pb-24">
       <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
@@ -24,7 +26,12 @@ export default function ComparisonSection({ comparison, theme }: Props) {
       </div>
 
       <div className="mt-8">
-        <ComparisonTable columns={comparison.columns} rows={comparison.rows} theme={theme} />
+        <ComparisonTable
+          columns={comparison.columns}
+          rows={comparison.rows}
+          labels={{ included: a11y.included, notIncluded: a11y.notIncluded }}
+          theme={theme}
+        />
       </div>
     </Container>
   );

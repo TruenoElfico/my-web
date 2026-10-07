@@ -705,6 +705,17 @@
         "label": "truenoelfico.com",
         "href": "https://truenoelfico.com"
       }
+    },
+    "a11y": {
+      "skipToContent": "Saltar al contenido",
+      "navLabel": "Principal",
+      "langToggle": "cambiar idioma a inglés",
+      "themeDark": "Oscuro",
+      "themeLight": "Claro",
+      "themeToggle": "cambiar tema de color",
+      "nextSection": "Ir a la siguiente sección",
+      "included": "Incluido",
+      "notIncluded": "No incluido"
     }
   }
 }

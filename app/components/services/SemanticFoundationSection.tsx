@@ -39,8 +39,10 @@ export default function SemanticFoundationSection({ semantic }: Props) {
       <Container className="relative grid gap-10 py-12 md:py-16 lg:grid-cols-2 lg:items-center">
         <Reveal y={16}>
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#69E8FF]">{semantic.eyebrow}</p>
-          <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">{semantic.heading1}</h2>
-          <h2 className="text-4xl font-semibold tracking-tight text-[#69E8FF] md:text-5xl">{semantic.heading2}</h2>
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
+            {semantic.heading1}
+            <span className="block text-[#69E8FF]">{semantic.heading2}</span>
+          </h2>
           <p className="mt-5 max-w-md leading-7 text-white/70">{semantic.description}</p>
           <p className="mt-6 text-sm text-white/60">{semantic.sub}</p>
 

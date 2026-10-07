@@ -24,9 +24,7 @@ export default function WhyWebsite({ why, theme }: Props) {
         <Reveal delay={0.05}>
           <h2 className={`text-4xl font-semibold leading-tight tracking-tight md:text-5xl ${theme.heading}`}>
             {why.heading1}
-          </h2>
-          <h2 className={`text-4xl font-semibold leading-tight tracking-tight md:text-5xl ${theme.headingAccent}`}>
-            {why.heading2}
+            <span className={`block ${theme.headingAccent}`}>{why.heading2}</span>
           </h2>
           <p className={`mt-5 max-w-lg leading-7 ${theme.body}`}>{why.description}</p>
         </Reveal>

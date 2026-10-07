@@ -15,7 +15,7 @@ export default function CompanyBadge({ icon, iconWidth, iconHeight, company, rol
     <div className={`flex items-center gap-4 rounded-2xl p-4 ${theme.cardBg}`}>
       <Image
         src={icon}
-        alt={company}
+        alt=""
         width={iconWidth}
         height={iconHeight}
         className="h-12 w-12 shrink-0 object-contain"

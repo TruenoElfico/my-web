@@ -22,7 +22,7 @@ export default function ServicesFooter({ footer, theme }: Props) {
 
           <div className="flex items-center gap-4">
             {footer.socials.map((social) => (
-              <SocialIcon key={social.label} icon={social.icon} label={social.label} href={social.href} />
+              <SocialIcon key={social.label} icon={social.icon} label={social.label} href={social.href} theme={theme} />
             ))}
             <a href={footer.siteLink.href} target="_blank" rel="noopener noreferrer" className="text-sm transition hover:opacity-80">
               {footer.siteLink.label}

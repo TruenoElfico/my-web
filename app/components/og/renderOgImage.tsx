@@ -26,7 +26,7 @@ export async function renderOgImage({
   titleLine1,
   titleLine2,
   description,
-  footer = "Braulio Romero · truenoelfico.com",
+  footer = "Braulio Romero · braulioromero.dev",
   titleSize = 64,
 }: OgImageContent) {
   const [heroPhoto, interMedium, interBold] = await Promise.all([

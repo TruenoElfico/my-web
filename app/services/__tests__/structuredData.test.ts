@@ -31,7 +31,7 @@ describe("services structured data", () => {
 
   it("only references @ids that exist in the graph or the root layout", () => {
     const ids = new Set(graph.map((node) => node["@id"]));
-    ids.add("https://truenoelfico.com/#person");
+    ids.add("https://braulioromero.dev/#person");
     const refs = [...JSON.stringify(graph).matchAll(/\{"@id":"([^"]+)"\}/g)].map((m) => m[1]);
     expect(refs.length).toBeGreaterThan(0);
     refs.forEach((ref) => expect(ids).toContain(ref));

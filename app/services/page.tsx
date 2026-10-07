@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicesPageClient from "./ServicesPageClient";
 import { servicesJsonLdScript } from "./structuredData";
 
-const BASE_URL = "https://truenoelfico.com";
+const BASE_URL = "https://braulioromero.dev";
 const PAGE_URL = `${BASE_URL}/services`;
 
 export const metadata: Metadata = {
